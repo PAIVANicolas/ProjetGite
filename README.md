@@ -64,7 +64,7 @@ Pas de Jquery.
 PropretÈ du code et dÈcoupage.
 Interaction BDD en Ajax/php
 Bdd mySQL.
-Carroussel photo JS fabriquÈ par toi.
+Carroussel photo JS fabriquÈ par toi, dynamique https://medium.com/allenhwkim/how-to-build-a-carousel-in-pure-javascript-98d758a18811 
 Menu qui mène sur des ancres de page ou des pages.
 (Calendrier pour a visu des disponibilitÈ, administrÈ donc par l'administrateur, Utiliser CMS)
 Page administration avec login, texte prÈsentation, tarifs(, gestion calendrier), gestion des photos, contact.
