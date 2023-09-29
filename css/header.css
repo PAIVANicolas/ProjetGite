@@ -2,7 +2,7 @@
 @import url("rules.css");
 
 /* Styles pour l'en-tête (header) */
-header {
+.header {
     background-color: var(--header-background-color); /* Utilisez la variable pour la couleur de fond de l'en-tête */
     color: var(--header-text-color); /* Utilisez la variable pour la couleur du texte de l'en-tête */
     text-align: center;
@@ -12,7 +12,7 @@ header {
     align-items: center;
 }
 
-.language-dropdown {
+.select, .mode-toggle {
     background-color: var(--nav-background-color); /* Utilisez la variable pour la couleur de fond de la barre de navigation */
     color: var(--nav-text-color); /* Utilisez la variable pour la couleur du texte de la barre de navigation */
     border: none;
@@ -20,6 +20,7 @@ header {
     border-radius: 5px;
     font-size: 14px;
     margin-left: 3%;
+    
     cursor: pointer;
 }
 

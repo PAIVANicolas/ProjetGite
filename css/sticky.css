@@ -20,7 +20,7 @@
     background-color: #f9f9f9; /* Couleur de fond du sous-conteneur */
     padding: 10px;
     border: 1px solid #ccc; /* Bordure autour du sous-conteneur */
-    text-align: center;
+    text-align: center; /* Centrer le contenu du sous-conteneur */
     width: 100%; /* Utilisation de 100% de la largeur du conteneur principal */
     margin-bottom: 10px; /* Espace en bas du sous-conteneur */
 }
@@ -28,6 +28,7 @@
 /* Style pour le titre "Contact" */
 .sub-container h2 {
     font-size: 18px;
+    text-align: left;
     margin: 0;
 }
 
@@ -39,6 +40,8 @@
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    margin: 0 auto; /* Centre le bouton horizontalement */
+    margin-top: 10%;
 }
 
 /* Style au survol du bouton "Réserver" */
@@ -49,4 +52,10 @@
 /* Styles pour les éléments de texte */
 .price, .phone, .email {
     margin: 5px 0;
+}
+
+/* Style pour le texte "À partir de XXX€ / semaine" */
+.phone, .email {
+    margin-left: 10%;
+    text-align: start; /* Alignement à droite */
 }
