@@ -8,4 +8,7 @@
             <!-- Ajoutez d'autres langues au besoin -->
         </select>
     </div>
+    <div class="mode-toggle" onclick="toggleDarkMode()">
+    <button type="button" data-theme-toggle aria-label="Change to dark theme">Change to dark theme</button>
+    </div>
 </header>

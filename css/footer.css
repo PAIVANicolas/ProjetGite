@@ -1,23 +1,27 @@
+/* Importez les variables CSS de rules.css */
+@import url("rules.css");
+
 /* CSS pour le footer */
 .footerpage {
     text-align: center;
     padding: 3px;
-    background-color: DarkSalmon;
+    /* Utilisez les variables pour la couleur de fond du footer */
+    background-color: var(--footer-background-color);
     display: flex;
-    color: white;
+    /* Utilisez les variables pour la couleur du texte du footer */
+    color: var(--footer-text-color);
     position: absolute;
     width: 100%;
     bottom: 0;
     justify-content: center;
 }
 
-.items{
+.items {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
-.item{
+.item {
     margin: 15px;
 }
