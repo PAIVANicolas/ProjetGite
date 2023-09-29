@@ -7,6 +7,7 @@
 
     <link rel="icon" href="favicon.ico" />
     <link href="/css/rules.css" rel="stylesheet"/>
+    <link href="/css/footer.css" rel="stylesheet"/>
     <title>GITE</title>
 </head>
 <body>
