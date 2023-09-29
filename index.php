@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="./css/sticky.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/map.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
     <title>GITE</title>
 </head>
@@ -21,9 +23,11 @@
 
 <?php include_once("sticky.php"); ?>
 
-
-
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="./js/map.js"></script>
 <?php include_once("footer.php"); ?>
+
 <script src="./js/mode.js"></script>
 </body>
 
