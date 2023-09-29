@@ -1,0 +1,27 @@
+/* Styles pour l'en-tête (header) */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-dropdown {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+.site-name {
+    margin: 0;
+    flex-grow: 1; /* Permet au titre de prendre tout l'espace disponible */
+    text-align: center; /* Centre le texte */
+}
