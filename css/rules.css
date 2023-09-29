@@ -1,34 +1,10 @@
-/* Styles pour la nav-menu */
-.nav-menu {
-    background-color: #333;
-    text-align: center;
-}
+/* Déclaration du charset UTF-8 */
+@charset "UTF-8";
 
-.nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.nav-menu ul li:last-child {
-    margin-right: 0;
-}
-
-.nav-menu ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.nav-menu ul li a:hover {
-    background-color: #555;
-    border-radius: 5px;
+/* Variables pour les couleurs du site */
+:root {
+    --background-color-light: #ffffff; /* Couleur de fond en mode clair */
+    --text-color-light: #333333; /* Couleur du texte en mode clair */
+    --background-color-dark: #333333; /* Couleur de fond en mode sombre */
+    --text-color-dark: #ffffff; /* Couleur du texte en mode sombre */
 }
