@@ -5,6 +5,60 @@
 :root {
     --background-color-light: #ffffff; /* Couleur de fond en mode clair */
     --text-color-light: #333333; /* Couleur du texte en mode clair */
+
     --background-color-dark: #333333; /* Couleur de fond en mode sombre */
     --text-color-dark: #ffffff; /* Couleur du texte en mode sombre */
+
+    /* Barre de navigation en mode light */
+    --nav-background-color-light: #333; /* Couleur de fond de la barre de navigation en mode light */
+    --nav-text-color-light: #fff; /* Couleur du texte de la barre de navigation en mode light */
+
+    /* Barre de navigation en mode dark */
+    --nav-background-color-dark: #111; /* Couleur de fond de la barre de navigation en mode dark */
+    --nav-text-color-dark: #fff; /* Couleur du texte de la barre de navigation en mode dark */
+
+    /* Footer en mode light */
+    --footer-background-color-light: #f0f0f0; /* Couleur de fond du footer en mode light */
+    --footer-text-color-light: #333333; /* Couleur du texte du footer en mode light */
+
+    /* Footer en mode dark */
+    --footer-background-color-dark: #333; /* Couleur de fond du footer en mode dark */
+    --footer-text-color-dark: #fff; /* Couleur du texte du footer en mode dark */
+
+    /* En-tête en mode light */
+    --header-background-color-light: #333; /* Couleur de fond de l'en-tête en mode light */
+    --header-text-color-light: #fff; /* Couleur du texte de l'en-tête en mode light */
+
+    /* En-tête en mode dark */
+    --header-background-color-dark: #111; /* Couleur de fond de l'en-tête en mode dark */
+    --header-text-color-dark: #fff; /* Couleur du texte de l'en-tête en mode dark */
+}
+
+/* Sélecteurs pour les modes light et dark */
+[data-theme="light"] {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --nav-background-color: var(--nav-background-color-light);
+    --nav-text-color: var(--nav-text-color-light);
+    --footer-background-color: var(--footer-background-color-light);
+    --footer-text-color: var(--footer-text-color-light);
+    --header-background-color: var(--header-background-color-light);
+    --header-text-color: var(--header-text-color-light);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --nav-background-color: var(--nav-background-color-dark);
+    --nav-text-color: var(--nav-text-color-dark);
+    --footer-background-color: var(--footer-background-color-dark);
+    --footer-text-color: var(--footer-text-color-dark);
+    --header-background-color: var(--header-background-color-dark);
+    --header-text-color: var(--header-text-color-dark);
+}
+
+/* Exemple d'utilisation des propriétés CSS personnalisées */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
