@@ -32,6 +32,15 @@
     /* En-tête en mode dark */
     --header-background-color-dark: #111; /* Couleur de fond de l'en-tête en mode dark */
     --header-text-color-dark: #fff; /* Couleur du texte de l'en-tête en mode dark */
+
+    /* Sticky en mode light */
+    --sticky-background-color-light: #C3C3C3 ; /* Couleur de fond de l'en-tête en mode light */
+    --sticky-text-color-light: #3C3C3C; /* Couleur du texte de l'en-tête en mode light */
+
+    /* Sticky en mode dark */
+    --sticky-background-color-dark: #111; /* Couleur de fond de l'en-tête en mode dark */
+    --sticky-text-color-dark: #fff; /* Couleur du texte de l'en-tête en mode dark */
+
 }
 
 /* Sélecteurs pour les modes light et dark */
@@ -44,6 +53,9 @@
     --footer-text-color: var(--footer-text-color-light);
     --header-background-color: var(--header-background-color-light);
     --header-text-color: var(--header-text-color-light);
+    --sticky-background-color: var(--sticky-background-color-light);
+    --sticky-text-color: var(--sticky-text-color-light);
+
 }
 
 [data-theme="dark"] {
@@ -55,6 +67,8 @@
     --footer-text-color: var(--footer-text-color-dark);
     --header-background-color: var(--header-background-color-dark);
     --header-text-color: var(--header-text-color-dark);
+    --sticky-background-color: var(--sticky-background-color-dark);
+    --sticky-text-color: var(--sticky-text-color-dark);
 }
 
 
@@ -65,5 +79,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }   
 
