@@ -9,22 +9,28 @@
 <?php
 require('bdd/config.php');
 session_start();
-if (isset($_POST['username'])){
-    $username = stripslashes($_REQUEST['username']);
-    $username = mysqli_real_escape_string($conn, $username);
-    $password = stripslashes($_REQUEST['password']);
-    $password = mysqli_real_escape_string($conn, $password);
-    $query = "SELECT * FROM `Utilisateur` WHERE identifiant='$username' and password='".hash('sha256', $password)."'";
-    $result = mysqli_query($conn,$query) or die(mysql_error());
-    $rows = mysqli_num_rows($result);
+if (isset($_POST['username'], $_POST['password'])) {
+    $username = $_POST['username'];
+    $hashedPassword = hash('sha256', $_POST['password']);
 
-    if($rows==1){
+
+    $stmt = $conn->prepare("SELECT * FROM `Utilisateur` WHERE identifiant = ? AND password = ?");
+    $stmt->bind_param("ss", $username, $hashedPassword);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $rows = $result->num_rows;
+
+    if ($rows == 1) {
+        session_regenerate_id();  // Régénération de l'ID de session
         $_SESSION['username'] = $username;
         header("Location: index.php");
-    }else{
-        $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+        exit;
+    } else {
+        $message = "Le mot de passe ou le nom d'utilisateur est incorrect.";
     }
 }
+
 ?>
 <form action="" class="box" method="post" name="login">
     <div class="cadreLogin" >
