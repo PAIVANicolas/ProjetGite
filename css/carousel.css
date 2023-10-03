@@ -1,0 +1,44 @@
+/* Styles pour le conteneur du carrousel */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* Largeur maximale du carrousel */
+    margin: 0 auto; /* Centre le carrousel horizontalement */
+    position: relative;
+}
+
+/* Styles pour les boutons de contrôle du carrousel */
+.nav-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+}
+
+#prevBtn {
+    position: absolute;
+    left: 0;
+}
+
+#nextBtn {
+    position: absolute;
+    right: 0;
+}
+
+/* Styles pour le conteneur des images */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+/* Styles pour les images du carrousel */
+.carousel img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
