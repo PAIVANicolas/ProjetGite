@@ -5,7 +5,7 @@
     background-color: DarkSalmon;
     display: flex;
     color: white;
-    position: fixed;
+    justify-content: flex-end;
     width: 100%;
     bottom: 0;
     justify-content: center;
