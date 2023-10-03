@@ -1,1 +1,6 @@
-#map { height: 400px; }
+#map { 
+    height: 45vh; 
+    border-radius: 15px;
+    margin: 1%;
+}
+
