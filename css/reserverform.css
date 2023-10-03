@@ -1,0 +1,89 @@
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 42%;
+    margin: 5% auto;
+    padding: 2%;
+    border: 0.1% solid #dcdcdc;
+    border-radius: 1%;
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2%;
+    border-radius: 7px;
+}
+
+.form-label {
+    margin-bottom: 0.5%;
+    font-size: 1.2em;  /* Not a percentage, but relative to the parent font-size */
+    font-weight: 500;
+    color: #333;
+    border-radius: 7px;
+}
+
+.form-input {
+    padding: 1%;
+    border: 0.1% solid #dcdcdc;
+    border-radius: 7px;
+    font-size: 1em;
+    width: 100%;
+
+}
+
+.submit {
+    padding: 1.5% 3%;
+    margin-right: 3%;
+    border: none;
+    border-radius: 7px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.2s;
+}
+
+.cancel{
+    padding: 1.5% 3%;
+    margin-right: 3%;
+    border: none;
+    background-color: #E74C3C;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.2s;
+    border-radius: 7px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 2%;
+    color: #E74C3C;
+}
+
+.button-group{
+    display: flex;
+    justify-content: center; /* Centrer les boutons */
+    align-items: center; /* Si vous voulez les centrer verticalement aussi */
+    width: 100%;
+    gap: 2%; /* Espacement entre les boutons */
+    border-radius: 7px;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+    box-shadow: 0 1% 2% rgba(0, 0, 0, 0.15); /* Ombre un peu plus prononcée au survol */
+    transform: translateY(-0.5%); /* Un léger mouvement vers le haut pour donner un effet de "pression" */
+}
+
+.messageErreur{
+    margin: 5%;
+}
