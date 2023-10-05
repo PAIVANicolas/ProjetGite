@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./css/rules.css">
     <link rel="stylesheet" type="text/css" href="./css/informationsLocation.css">
     <link rel="stylesheet" type="text/css" href="./css/nav.css">
-    <link rel="stylesheet" type="text/css" href="./css/sticky.css">
+
     <link rel="stylesheet" type="text/css" href="./css/header.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="./css/map.css"/>

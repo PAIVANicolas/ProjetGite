@@ -34,14 +34,14 @@
 
 /* Style pour le bouton "Réserver" */
 .reserve-button {
+
     background-color: #007bff; /* Couleur de fond du bouton */
-    color: #fff; /* Couleur du texte du bouton */
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     margin: 0 auto; /* Centre le bouton horizontalement */
-    margin-top: 10%;
+
 }
 
 /* Style au survol du bouton "Réserver" */

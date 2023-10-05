@@ -1,4 +1,6 @@
-.bloc_categorie {
+@import url("rules.css");
+
+.bloc-categorie {
     display: flex;
     flex-direction: column;
     align-items: left; /* Pour aligner verticalement le titre et la liste */
@@ -6,15 +8,21 @@
     border-bottom: 1px solid #eaeaea;
     padding-bottom: 2%;
     margin-bottom: 2%;
+
 }
 
-.bloc_categorie .bloc_presentation {
-    padding-bottom: 1%;
-    margin-bottom: 1%;
+.reserve-button{
+    background-color: #007bff; /* Couleur de fond du bouton */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto; /* Centre le bouton horizontalement */
+
 }
 
 
-.bloc_categorie:last-child{
+.bloc-categorie:last-child{
     border-bottom: none;
 }
 
