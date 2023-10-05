@@ -4,11 +4,25 @@
     align-items: center;
     width: 42%;
     margin: 5% auto;
-    padding: 2%;
+    padding: 3%;
     border: 0.1% solid #dcdcdc;
     border-radius: 1%;
     box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1);
     background-color: #f0f0f0;
+    box-sizing: border-box;
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .reservation-form {
+        width: 80%; /* Le formulaire prendra 80% de la largeur de l'écran */
+    }
+
+    .form-group {
+        padding: 3%;
+
+    }
 }
 
 .form-group {
@@ -17,6 +31,7 @@
     width: 100%;
     margin-bottom: 2%;
     border-radius: 7px;
+
 }
 
 .form-label {
@@ -33,6 +48,7 @@
     border-radius: 7px;
     font-size: 1em;
     width: 100%;
+    max-width: 100%;
 
 }
 
@@ -87,3 +103,4 @@
 .messageErreur{
     margin: 5%;
 }
+
