@@ -1,7 +1,7 @@
 <?php
 require('bdd/config.php');
 
-$message = ""; // Pour afficher les erreurs
+$message = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(isset($_POST['submitForm'])) {
@@ -33,7 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             if ($stmt->execute()) {
-                header("Location: index.php");
+                $isFormValid = true;
+                 header("Location: index.php");
             } else {
                 $message = "Erreur lors de la soumission de la réservation: " . $stmt->error;
             }
@@ -49,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
+    <title>Réservation</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -59,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="./css/reserverform.css">
 </head>
-<title>Réservation</title>
+
 
 
 
@@ -100,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="button-group">
-        <button type="submit" name="submitForm"  class="submit">Soumettre la Réservation</button>
+        <button type="submit" name="submitForm"  class="submit" onclick="sendEmail()">Soumettre la Réservation</button>
         <button type="cancel" name="cancelForm" class="cancel">Annuler</button>
 
 
@@ -140,5 +142,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         });
     });
+
+
+    function sendEmail() {
+        <?php if ($isFormValid): ?>
+        let clientName = document.getElementById('clientName').value;
+
+
+        let clientSurname = document.getElementById('clientSurname').value;
+
+
+        let startDate = document.getElementById('startDate').value;
+
+
+        let endDate = document.getElementById('endDate').value;
+
+
+        let clientEmail = document.getElementById('clientEmail').value;
+
+
+        let clientPhone = document.getElementById('clientPhone').value;
+
+
+        let subject = "Réservation du " + startDate + " au " + endDate;
+
+        let body = "Bonjour,\n\n" +
+            "Je souhaite effectuer une réservation pour les dates du " + startDate + " au " + endDate + ".\n\n" +
+            "Voici mes coordonnées :\n" +
+            "Nom : " + clientName + " Prénom : " + clientSurname + "\n" +
+            "Email : " + clientEmail + "\n" +
+            "Téléphone : " + clientPhone + "\n\n" +
+            "Cordialement,\n" +
+            clientName + " " + clientSurname;
+        window.location.href = "mailto:mkltr@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+        <?php endif; ?>
+    }
+
 </script>
 </html>
