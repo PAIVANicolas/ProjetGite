@@ -3,6 +3,19 @@
     flex-direction: column;
     align-items: left; /* Pour aligner verticalement le titre et la liste */
     margin-left: 2%;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+}
+
+.bloc_categorie .bloc_presentation {
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+
+.bloc_categorie:last-child{
+    border-bottom: none;
 }
 
 ul {
@@ -15,9 +28,15 @@ li{
     padding-left: 4%;
 }
 
-
-.bloc_liste{
+.bloc_liste {
     display: flex;
     flex-direction: row;
+}
 
+.title-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.title-color {
+    color: #D2691E; /* Terre Cuite */
 }
