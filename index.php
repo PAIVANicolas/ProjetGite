@@ -16,14 +16,14 @@
     <link rel="stylesheet" type="text/css" href="./css/carousel.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>GITE</title>
+    <title>Gîte Figuiès</title>
 </head>
 <body>
 <?php include_once("header.php"); ?>
 <?php include_once("nav.php"); ?>
 <?php include_once("carousel.php"); ?>
 
-<?php include_once("sticky.php"); ?>
+
 
 <?php include_once("informationsLocation.php"); ?>
 
