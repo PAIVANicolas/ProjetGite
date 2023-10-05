@@ -1,0 +1,23 @@
+.bloc_categorie {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Pour aligner verticalement le titre et la liste */
+    margin-left: 2%;
+}
+
+ul {
+    list-style-type: none; /* Enlève les puces */
+    padding-left: 0; /* Enlève le padding à gauche qui est généralement ajouté pour les puces */
+
+}
+
+li{
+    padding-left: 4%;
+}
+
+
+.bloc_liste{
+    display: flex;
+    flex-direction: row;
+
+}

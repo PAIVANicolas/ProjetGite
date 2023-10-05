@@ -7,6 +7,7 @@
 
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="./css/rules.css">
+    <link rel="stylesheet" type="text/css" href="./css/informationsLocation.css">
     <link rel="stylesheet" type="text/css" href="./css/nav.css">
     <link rel="stylesheet" type="text/css" href="./css/sticky.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css"/>
@@ -14,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="./css/map.css"/>
     <link rel="stylesheet" type="text/css" href="./css/carousel.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>GITE</title>
 </head>
 <body>
@@ -23,6 +24,9 @@
 <?php include_once("carousel.php"); ?>
 
 <?php include_once("sticky.php"); ?>
+
+<?php include_once("informationsLocation.php"); ?>
+
 
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
