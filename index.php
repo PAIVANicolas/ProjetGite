@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="./css/map.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/carrousel.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Gîte Figuiès</title>
@@ -21,7 +21,7 @@
 <body>
 <?php include_once("header.php"); ?>
 <?php include_once("nav.php"); ?>
-<?php include_once("carousel.php"); ?>
+<?php include_once("carrousel.php"); ?>
 
 
 
@@ -35,7 +35,7 @@
 
 <?php include_once("footer.php"); ?>
 <script src="./js/mode.js"></script>
-<script src="./js/carousel.js"></script>
+<script src="./js/carrousel.js"></script>
 
 
 </body>
