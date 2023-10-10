@@ -11,13 +11,25 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <title>Tableau de bord</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script>
 </head>
 
 <body>
 <?php include_once("header.php"); ?>
-<?php include_once("nav.php"); ?>
+<?php include_once("navAdmin.php"); ?>
 
-<?php include_once("calendar.php"); ?>
+
 
 <?php include_once("footer.php"); ?>
 </body>
