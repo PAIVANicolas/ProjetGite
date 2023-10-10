@@ -23,13 +23,13 @@
 
 }
 
-ul {
+.custom-ul {
     list-style-type: none; /* Enlève les puces */
     padding-left: 0; /* Enlève le padding à gauche qui est généralement ajouté pour les puces */
 
 }
 
-li{
+.custom-li{
     padding-left: 4%;
 }
 
