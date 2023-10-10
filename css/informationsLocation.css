@@ -5,11 +5,12 @@
     flex-direction: column;
     align-items: left; /* Pour aligner verticalement le titre et la liste */
     flex-wrap: wrap;
-    margin-left: 2%;
-    border-bottom: 1px solid #eaeaea;
-    padding-bottom: 2%;
+    margin: 1%;
+    border: 1px solid #eaeaea; /* Ajoute une bordure */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    padding: 2%; /* Ajoute un espacement interne */
     margin-bottom: 2%;
-
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
 }
 
 .reserve-button{
@@ -22,11 +23,6 @@
 
 }
 
-
-.bloc-categorie:last-child{
-    border-bottom: none;
-}
-
 ul {
     list-style-type: none; /* Enlève les puces */
     padding-left: 0; /* Enlève le padding à gauche qui est généralement ajouté pour les puces */
@@ -37,7 +33,7 @@ li{
     padding-left: 4%;
 }
 
-.bloc_liste {
+.bloc-liste {
     display: flex;
     flex-direction: row;
 }
