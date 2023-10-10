@@ -1,5 +1,8 @@
 @import url("rules.css");
 
+.bloc-general{
+    width: 100vw;
+}
 .bloc-categorie {
     display: flex;
     flex-direction: column;
