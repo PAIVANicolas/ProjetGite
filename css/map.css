@@ -1,6 +1,11 @@
 #map { 
     height: 45vh; 
     border-radius: 15px;
+    justify-content: center;
     margin: 1%;
+}
+
+.container-map{
+    width: 100vw;
 }
 

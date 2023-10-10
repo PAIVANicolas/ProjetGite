@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="./css/map.css"/>
     <link rel="stylesheet" type="text/css" href="./css/carrousel.css"/>
-    
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Gîte Figuiès</title>
@@ -27,11 +27,11 @@
 
 <?php include_once("informationsLocation.php"); ?>
 
-
-<div id="map"></div>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="./js/map.js"></script>
-
+<div class="container-map">
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="./js/map.js"></script>
+</div>
 
 <?php include_once("footer.php"); ?>
 <script src="./js/mode.js"></script>

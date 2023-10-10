@@ -5,6 +5,7 @@
 .nav-menu {
     background-color: var(--nav-background-color); /* Utilisez la variable pour la couleur de fond de la barre de navigation */
     text-align: center;
+    width: 100vw;
 }
 
 .nav-menu ul {
