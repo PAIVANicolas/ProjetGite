@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mar. 03 oct. 2023 à 08:55
+-- Généré le : mer. 11 oct. 2023 à 08:43
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -61,8 +61,17 @@ CREATE TABLE `reservations` (
                                 `client_phone` varchar(20) DEFAULT NULL,
                                 `status` enum('en attente','confirmée','rejetée') NOT NULL,
                                 `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-                                `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+                                `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+                                `client_surname` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `reservations`
+--
+
+INSERT INTO `reservations` (`id`, `start_date`, `end_date`, `client_name`, `client_email`, `client_phone`, `status`, `created_at`, `updated_at`, `client_surname`) VALUES
+                                                                                                                                                                       (17, '2023-10-05', '2023-10-06', 'Ad', 'o@gma.com', '0602267210', 'en attente', '2023-10-05 12:06:00', '2023-10-10 16:09:16', 'Ju'),
+                                                                                                                                                                       (18, '2023-10-06', '2023-10-07', 'Adap', 'o@gma.com', '0602267210', 'en attente', '2023-10-05 12:09:58', '2023-10-05 12:09:58', 'Ju');
 
 -- --------------------------------------------------------
 
@@ -133,7 +142,7 @@ ALTER TABLE `Image`
 -- AUTO_INCREMENT pour la table `reservations`
 --
 ALTER TABLE `reservations`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `Utilisateur`
