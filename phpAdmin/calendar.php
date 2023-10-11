@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include_once("connectionCheck.php"); ?>
-    <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./css/rules.css">
-    <link rel="stylesheet" type="text/css" href="./css/nav.css">
-    <link rel="stylesheet" type="text/css" href="./css/header.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/calendar.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
+    <?php include_once("./phpAdmin/connectionCheck.php"); ?>
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/rules.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/calendar.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/footer.css"/>
     <title>Calendrier</title>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 
     <?php
-    require('bdd/config.php');
-    session_start();
+    require('../assets/bdd/config.php');
     $requetecalendrier = "SELECT * FROM reservations where status !='rejetée'";
     $requetetableau = "SELECT * FROM reservations where status !='confirmée'";
     $resultcalendrier = $conn->query($requetecalendrier);
@@ -32,9 +31,7 @@
                 'end' => $end_date->format('Y-m-d'),
                 'color' => ($row["status"] == 'rejetée') ? 'red' : (($row["status"] == 'confirmée') ? 'green' : 'orange')
             );
-            echo "<pre>";  // Pour formater l'affichage
-            print_r($events);  // Affiche le contenu du tableau
-            echo "</pre>";
+
 
         }
 
@@ -74,8 +71,8 @@
 </head>
 
 <body>
-<?php include_once("header.php"); ?>
-<?php include_once("navAdmin.php"); ?>
+<?php include_once("../php/header.php"); ?>
+<?php include_once("../phpAdmin/navAdmin.php"); ?>
 
 <div id='calendar'></div>
 
@@ -142,6 +139,6 @@
     }
 </script>
 
-<?php include_once("footer.php"); ?>
+<?php include_once("../php/footer.php"); ?>
 </body>
 </html>
