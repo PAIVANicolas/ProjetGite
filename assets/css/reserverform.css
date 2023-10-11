@@ -1,3 +1,6 @@
+/* Importez les variables CSS de rules.css */
+@import url("rules.css");
+
 .reservation-form {
     display: flex;
     flex-direction: column;
