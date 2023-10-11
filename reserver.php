@@ -1,5 +1,5 @@
 <?php
-require('./assets/bdd/config.php');
+require('bdd/config.php');
 
 $message = "";
 
@@ -34,14 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($stmt->execute()) {
                 $isFormValid = true;
-                 header("Location: ./index.php");
+                 header("Location: index.php");
             } else {
                 $message = "Erreur lors de la soumission de la réservation: " . $stmt->error;
             }
         }
     }
     if(isset($_POST['cancelForm'])) {
-        header("Location: ./index.php");
+        header("Location: index.php");
         exit();
     }
 }
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <body>
-<?php include_once("./php/header.php"); ?>
+<?php include_once("header.php"); ?>
 
 
 <form action="" method="POST" class="reservation-form">

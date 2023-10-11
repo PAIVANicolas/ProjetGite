@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include_once("connectionCheck.php"); ?>
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/rules.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/header.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/calendar.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/rules.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/calendar.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <title>Calendrier</title>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 
     <?php
-    require('./assets/bdd/config.php');
+    require('bdd/config.php');
     session_start();
     $requetecalendrier = "SELECT * FROM reservations where status !='rejetée'";
     $requetetableau = "SELECT * FROM reservations where status !='confirmée'";
