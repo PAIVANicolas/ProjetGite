@@ -47,15 +47,26 @@
             var calendarEl = document.getElementById('calendar');
             var eventsData = <?php echo json_encode($events); ?>;
 
-            calendar = new FullCalendar.Calendar(calendarEl, {
-                locale: 'fr',
-                initialView: 'timeGridWeek',
-                headerToolbar: {
+            var toolbarOptions;
+            if (window.innerWidth < 768) {
+                toolbarOptions = {
+                    left: 'prev,next',
+                    center: 'title',
+                    right: ''
+                };
+            } else {
+                toolbarOptions = {
                     left: 'prev,next today',
                     center: 'title',
                     right: 'dayGridMonth,timeGridWeek,timeGridDay',
                     locale: 'fr'
-                },
+                };
+            }
+
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                locale: 'fr',
+                initialView: 'timeGridWeek',
+                headerToolbar: toolbarOptions,
                 eventOverlap: true,
                 buttonText: {
                     today : 'aujourd\'hui',
@@ -63,10 +74,20 @@
                     month:'mois',
                     week : 'semaine',
                 },
-                events: eventsData
+                events: eventsData, height: 'auto',
+                contentHeight: 'auto',
+                aspectRatio: 1.8,
+                windowResize: function(view, element) {
+                    if (window.innerWidth < 768) {
+                        calendar.changeView('timeGridDay');
+                    } else {
+                        calendar.changeView('timeGridWeek');
+                    }
+                }
             });
             calendar.render();
         });
+
     </script>
 </head>
 
@@ -136,6 +157,7 @@
             }
         }
         xhr.send("id=" + id + "&status=" + status + "&start_time=" + startTime + "&end_time=" + endTime);
+        console.log(startTime + endTime );
     }
 </script>
 
