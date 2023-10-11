@@ -24,13 +24,20 @@
 
     if ($resultcalendrier->num_rows > 0) {
         while($row = $resultcalendrier->fetch_assoc()) {
+            $end_date = new DateTime($row["end_date"]);
+            $end_date->modify('+1 day');
             $events[] = array(
                 'title' => $row["client_name"] . ' ' . $row["client_surname"],
                 'start' => $row["start_date"],
-                'end' => $row["end_date"],
+                'end' => $end_date->format('Y-m-d'),
                 'color' => ($row["status"] == 'rejetée') ? 'red' : (($row["status"] == 'confirmée') ? 'green' : 'orange')
             );
+            echo "<pre>";  // Pour formater l'affichage
+            print_r($events);  // Affiche le contenu du tableau
+            echo "</pre>";
+
         }
+
         $resultcalendrier->data_seek(0);  // réinitialise le curseur à la première ligne
 
     }
@@ -52,7 +59,7 @@
                     right: 'dayGridMonth,timeGridWeek,timeGridDay',
                     locale: 'fr'
                 },
-                eventOverlap: false,
+                eventOverlap: true,
                 buttonText: {
                     today : 'aujourd\'hui',
                     day : 'jour',
