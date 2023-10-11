@@ -24,13 +24,12 @@ if (isset($_POST['username'], $_POST['password'])) {
     if ($rows == 1) {
         session_regenerate_id();  // Régénération de l'ID de session
         $_SESSION['username'] = $username;
-        header("Location: index.php");
+        header("Location: dashboard.php");
         exit;
     } else {
         $message = "Le mot de passe ou le nom d'utilisateur est incorrect.";
     }
 }
-
 ?>
 <form action="" class="box" method="post" name="login">
     <div class="cadreLogin" >
