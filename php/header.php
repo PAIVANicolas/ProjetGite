@@ -1,6 +1,6 @@
 <header>
     <div class="header">
-        <h1 class="">Figuiès</h1>
+        <h1 class="site-nane">Figuiès</h1>
         <!-- Insérez ici votre liste déroulante pour la langue -->
         <div class="sub-header">
             <select class="select">
