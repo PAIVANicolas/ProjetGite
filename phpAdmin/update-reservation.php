@@ -1,7 +1,7 @@
 <?php
 require('../assets/bdd/config.php');
 session_start();
-echo '<script>alert("Votre message d\'alerte ici.");</script>';
+
 if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time'])) {
 
     $id = $_POST['id'];
@@ -9,31 +9,30 @@ if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time
     $startTime = $_POST['start_time'];
     $endTime = $_POST['end_time'];
 
+    echo $startTime +" "+$endTime;
+    $sql = "UPDATE reservations SET status=?";
 
-$overlapQuery = "SELECT id FROM reservations 
-    WHERE 
-    ((start_date BETWEEN CONCAT(DATE(start_date), ' ', ?) AND CONCAT(DATE(end_date), ' ', ?)) 
-    OR 
-    (end_date BETWEEN CONCAT(DATE(start_date), ' ', ?) AND CONCAT(DATE(end_date), ' ', ?)) 
-    OR 
-    (? BETWEEN start_date AND end_date) 
-    OR 
-    (? BETWEEN start_date AND end_date)) 
-    AND id != ?";
+    if ($startTime && $endTime) {
+        $sql .= ", start_date=CONCAT(DATE(start_date), ' ', ?), end_date=CONCAT(DATE(end_date), ' ', ?)";
+    }
 
-$overlapStmt = $conn->prepare($overlapQuery);
-$overlapStmt->bind_param("ssssssi", $startTime, $endTime, $startTime, $endTime, $startTime, $endTime, $id);
-$overlapStmt->execute();
-$overlapStmt->store_result();
-    echo '<script>alert("Votre message d\'alerte ici.");</script>';
-if ($overlapStmt->num_rows > 0) {
-    echo '<script>alert("Votre message d\'alerte ici.");</script>';
+    $sql .= " WHERE id=?";
 
-    $overlapStmt->close();
-    $conn->close();
-    exit();
-}
+    $stmt = $conn->prepare($sql);
 
+    if ($startTime && $endTime) {
+        $stmt->bind_param("sssi", $status, $startTime, $endTime, $id);
+    } else {
+        $stmt->bind_param("si", $status, $id);
+    }
+
+    if ($stmt->execute()) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
+
+    $stmt->close();
 }
 
 $conn->close();
