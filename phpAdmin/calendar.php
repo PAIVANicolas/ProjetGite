@@ -73,7 +73,6 @@
                     month:'mois',
                     week : 'semaine',
                 },
-                allDaySlot: false,
                 events: eventsData, height: 'auto',
                 contentHeight: 'auto',
                 aspectRatio: 1.8,
@@ -124,7 +123,7 @@
                     echo "<td>" . $row["status"] . "</td>";
                     echo "<td>";
                     echo "<button onclick='validerReservation(" . $row["id"] . ")'>Valider</button>";
-                    echo "<button onclick='refuserReservation(" . $row["id"] . ")'>Refuser</button>";
+                    echo "<button onclick='supprimerReservation(" . $row["id"] . ")'>Supprimer</button>";
                     echo "</td>";
                     echo "</tr>";
                 }
@@ -147,14 +146,25 @@
     }
 
 
-    function refuserReservation(id) {
-        updateReservation(id, 'rejetée', null, null);
+    function supprimerReservation(id) {
+        if (confirm("Êtes-vous sûr de vouloir supprimer cette réservation?")) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "delete-reservation.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                    calendar.refetchEvents();
+                }
+            }
+            xhr.send("id=" + id);
+        }
     }
+
 
 
     function updateReservation(id, status, startTime, endTime) {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "update_reservation.php", true);
+        xhr.open("POST", "update-reservation.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
@@ -164,6 +174,7 @@
         xhr.send("id=" + id + "&status=" + status + "&start_time=" + startTime + "&end_time=" + endTime);
         console.log(startTime + endTime );
     }
+
 </script>
 
 
