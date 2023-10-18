@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./assets/css/loginform.css">
 </head>
 <body>
-<form action="./phpAdmin/loginaction.php" class="box" method="post" name="login">
+<form id="loginForm" class="box" method="post" name="login">
     <div class="cadreLogin" >
         <h2 class="title">Se connecter</h2>
         <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
@@ -17,5 +17,37 @@
         <p class="errorMessage"><?php echo $message; ?></p>
     <?php } ?>
 </form>
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let formData = new FormData(this);
+
+        fetch('./phpAdmin/loginaction.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (!response.ok) { // Si le statut HTTP est autre que 2xx
+                    return response.text().then(text => {
+                        throw new Error(text); // Rejetez la promesse avec le texte de la réponse
+                    });
+                }
+                return response.text(); // Sinon, résolvez la promesse avec le texte de la réponse
+            })
+            .then(text => {
+                if (text.includes('dashboard.php')) { // Si la réponse contient 'dashboard.php', c'est une redirection
+                    window.location.href = './phpAdmin/dashboard.php';
+                } else {
+                    const errorMsg = document.querySelector('.errorMessage');
+                    errorMsg.textContent = "Le mot de passe ou le nom d'utilisateur est incorrect.";
+                    errorMsg.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                 window.alert(error);
+            });
+    });
+</script>
 </body>
 </html>

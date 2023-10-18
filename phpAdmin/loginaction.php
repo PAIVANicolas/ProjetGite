@@ -14,12 +14,15 @@ if (isset($_POST['username'], $_POST['password'])) {
     $rows = $result->num_rows;
 
     if ($rows == 1) {
-        session_regenerate_id();  // Régénération de l'ID de session
+        session_regenerate_id();
         $_SESSION['username'] = $username;
         header("Location: dashboard.php");
         exit;
     } else {
-        $message = "Le mot de passe ou le nom d'utilisateur est incorrect.";
+        http_response_code(400); // Renvoyez un statut HTTP 400 pour indiquer une requête incorrecte
+        echo "Le mot de passe ou le nom d'utilisateur est incorrect.";
+        exit;
     }
+
 }
 ?>
