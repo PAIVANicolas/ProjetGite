@@ -1,7 +1,7 @@
 /* Importez les variables CSS de rules.css */
 @import url("rules.css");
 
-/* CSS pour le footer */
+/* Styles de base pour le footer */
 .footerpage {
     text-align: center;
     padding: 3px;
@@ -13,13 +13,29 @@
     justify-content: center;
 }
 
-.items{
+.items {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
-.item{
+.item {
     margin: 15px;
+}
+
+/* Media query pour écrans plus petits (par exemple, max-width: 768px) */
+@media (max-width: 768px) {
+    .footerpage {
+        flex-direction: column; /* Change la direction pour empiler les éléments verticalement */
+        text-align: center; /* Centre le texte */
+    }
+
+    .items {
+        flex-direction: column; /* Empilez les éléments à l'intérieur de .items */
+        align-items: center; /* Centrez les éléments verticalement */
+    }
+
+    .item {
+        margin: 10px 0; /* Ajoute une marge supérieure et inférieure pour séparer les éléments */
+    }
 }
