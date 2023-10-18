@@ -18,8 +18,8 @@
 .sub-header {
     position: absolute;
     right: 20px;
-    display: flex; /* Utilisez une flexbox pour aligner les éléments horizontalement */
-    align-items: center; /* Alignez les éléments verticalement au centre */
+    display: flex;
+    align-items: center;
 }
 
 .select, .mode-toggle {
@@ -28,7 +28,24 @@
     border: none;
     cursor: pointer;
     font-size: 14px;
-    margin: 1%; /* Augmentez la marge entre les éléments si nécessaire */
+    margin: 1%;
+}
+
+/* Media query pour écrans plus petits (par exemple, max-width: 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Change la direction pour empiler les éléments verticalement */
+        text-align: center; /* Centre le texte */
+    }
+
+    .sub-header {
+        position: static; /* Rétablit la position normale */
+        margin-top: 20px; /* Ajoute une marge supérieure pour séparer la sous-entête de l'en-tête */
+    }
+
+    .select, .mode-toggle {
+        margin: 1% 0; /* Ajoute une marge supérieure et inférieure pour séparer les éléments dans la sous-entête */
+    }
 }
 
 
