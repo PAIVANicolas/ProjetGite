@@ -1,6 +1,7 @@
 /* Importez les variables CSS de rules.css */
 @import url("rules.css");
 
+
 #calendar{
     display: flex;
     border: 1px solid #ddd;
@@ -9,10 +10,107 @@
     border-radius: 15px;
     width: 100hw;
 
+
 }
 
-.tableau-reservations{
+
+.tableau-reservations {
     display: flex;
     width: 100hw;
+    justify-content: center;
+    margin-top: 20px;
 
+
+}
+
+
+.tableau-reservations table {
+    width: 90%;  /* pour assurer que le tableau utilise toute la largeur disponible */
+    border-collapse: collapse;  /* pour s'assurer que les bordures des cellules s'affichent correctement */
+    border-radius: 10px;
+    overflow: hidden;  /* pour masquer les bordures et le contenu dépassant */
+    border: 2px solid #ddd;  /* ajuster selon vos préférences de couleur et de largeur */
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+
+.tableau-reservations th,
+.tableau-reservations td {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;  /* bordure entre les rangées */
+}
+
+
+.tableau-reservations th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+
+.tableau-reservations tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.tableau-reservations button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.tableau-reservations button:hover {
+    background-color: #ddd;
+}
+
+
+.tableau-reservations tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+
+.tableau-reservations tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+
+.tableau-reservations tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+
+.tableau-reservations tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+.tableau-reservations tr:last-child td {
+    border-bottom: none;  /* pour éviter une bordure double sur la dernière rangée */
+}
+
+
+.tableau-reservations tr:hover {
+    background-color: #f5f5f5;  /* couleur d'arrière-plan au survol, choisissez votre couleur préférée */
+}
+
+
+.tableau-reservations th {
+    background-color: #4CAF50;  /* couleur d'arrière-plan des entêtes de colonnes, ajustez selon vos préférences */
+    color: white;
+}
+
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* pour les empiler verticalement */
+    align-items: center; /* centre les éléments horizontalement */
+    gap: 10px; /* espace entre les éléments */
+    padding: 10px;
+    width: 100%;
 }
