@@ -13,6 +13,7 @@
     <title>Calendrier</title>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 
+
     <?php
     require('../assets/bdd/config.php');
     $requetecalendrier = "SELECT * FROM reservations where status !='rejetée'";
@@ -20,6 +21,7 @@
     $resultcalendrier = $conn->query($requetecalendrier);
     $resulttableau = $conn->query($requetetableau);
     $events = array();
+
 
     if ($resultcalendrier->num_rows > 0) {
         while($row = $resultcalendrier->fetch_assoc()) {
@@ -31,21 +33,17 @@
                 'end' => $end_date->format('Y-m-d'),
                 'color' => ($row["status"] == 'rejetée') ? 'red' : (($row["status"] == 'confirmée') ? 'green' : 'orange')
             );
-
-
         }
-
-        $resultcalendrier->data_seek(0);  // réinitialise le curseur à la première ligne
-
+        $resultcalendrier->data_seek(0);
     }
     ?>
 
     <script>
-        var calendar;  // Make it global
-
+        var calendar;
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
             var eventsData = <?php echo json_encode($events); ?>;
+
 
             var toolbarOptions;
             if (window.innerWidth < 768) {
@@ -63,6 +61,7 @@
                 };
             }
 
+
             calendar = new FullCalendar.Calendar(calendarEl, {
                 locale: 'fr',
                 initialView: 'timeGridWeek',
@@ -74,9 +73,12 @@
                     month:'mois',
                     week : 'semaine',
                 },
+                allDaySlot: false,
                 events: eventsData, height: 'auto',
                 contentHeight: 'auto',
                 aspectRatio: 1.8,
+
+
                 windowResize: function(view, element) {
                     if (window.innerWidth < 768) {
                         calendar.changeView('timeGridDay');
@@ -88,52 +90,53 @@
             calendar.render();
         });
 
+
     </script>
 </head>
+
 
 <body>
 <?php include_once("../php/header.php"); ?>
 <?php include_once("../phpAdmin/navAdmin.php"); ?>
-
-<div id='calendar'></div>
-
-<div class="tableau-reservations">
-    <table>
-        <thead>
-        <tr>
-            <th>Date de début</th>
-            <th>Date de fin</th>
-            <th>Nom du client</th>
-            <th>Prénom du client</th>
-            <th>Status</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php
-        if ($resulttableau->num_rows > 0) {
-            while($row = $resulttableau->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . $row["start_date"] . "</td>";
-                echo "<td>" . $row["end_date"] . "</td>";
-                echo "<td>" . $row["client_name"] . "</td>";
-                echo "<td>" . $row["client_surname"] . "</td>";
-                echo "<td>" . $row["status"] . "</td>";
-                echo "<td>";
-                echo "<button onclick='validerReservation(" . $row["id"] . ")'>Valider</button>";
-                echo "<button onclick='refuserReservation(" . $row["id"] . ")'>Refuser</button>";
-                echo "</td>";
-                echo "</tr>";
+<div class="content-wrapper">
+    <div id='calendar'></div>
+    <div class="tableau-reservations">
+        <table>
+            <thead>
+            <tr>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+                <th>Nom du client</th>
+                <th>Prénom du client</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            if ($resulttableau->num_rows > 0) {
+                while($row = $resulttableau->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["start_date"] . "</td>";
+                    echo "<td>" . $row["end_date"] . "</td>";
+                    echo "<td>" . $row["client_name"] . "</td>";
+                    echo "<td>" . $row["client_surname"] . "</td>";
+                    echo "<td>" . $row["status"] . "</td>";
+                    echo "<td>";
+                    echo "<button onclick='validerReservation(" . $row["id"] . ")'>Valider</button>";
+                    echo "<button onclick='refuserReservation(" . $row["id"] . ")'>Refuser</button>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='6'>Aucune réservation trouvée</td></tr>";
             }
-        } else {
-            echo "<tr><td colspan='6'>Aucune réservation trouvée</td></tr>";
-        }
-        $conn->close();
-        ?>
-        </tbody>
-    </table>
+            $conn->close();
+            ?>
+            </tbody>
+        </table>
+    </div>
 </div>
-
 <script>
     function validerReservation(id) {
         var startTime = prompt("Veuillez entrer l'heure de début (format HH:mm) :");
@@ -143,9 +146,11 @@
         }
     }
 
+
     function refuserReservation(id) {
         updateReservation(id, 'rejetée', null, null);
     }
+
 
     function updateReservation(id, status, startTime, endTime) {
         var xhr = new XMLHttpRequest();
@@ -160,6 +165,7 @@
         console.log(startTime + endTime );
     }
 </script>
+
 
 <?php include_once("../php/footer.php"); ?>
 </body>
