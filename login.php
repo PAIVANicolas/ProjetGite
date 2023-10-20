@@ -20,23 +20,21 @@
 <script>
     document.getElementById("loginForm").addEventListener("submit", function(e) {
         e.preventDefault();
-
         let formData = new FormData(this);
-
         fetch('./phpAdmin/loginaction.php', {
             method: 'POST',
             body: formData
         })
             .then(response => {
-                if (!response.ok) { // Si le statut HTTP est autre que 2xx
+                if (!response.ok) {
                     return response.text().then(text => {
-                        throw new Error(text); // Rejetez la promesse avec le texte de la réponse
+                        throw new Error(text);
                     });
                 }
-                return response.text(); // Sinon, résolvez la promesse avec le texte de la réponse
+                return response.text();
             })
             .then(text => {
-                if (text.includes('dashboard.php')) { // Si la réponse contient 'dashboard.php', c'est une redirection
+                if (text.includes('dashboard.php')) {
                     window.location.href = './phpAdmin/dashboard.php';
                 } else {
                     const errorMsg = document.querySelector('.errorMessage');
