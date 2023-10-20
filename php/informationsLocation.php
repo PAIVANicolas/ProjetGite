@@ -22,7 +22,7 @@
         Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.
         </p>
         <button class="reserve-button"><a class="submit" href="./reserver.php">Réserver</a></button>
-        <button class="expand-button"><i class="fa-solid fa-chevron-down"></i></button>
+        <button class="expand-button" onclick="toggleExpand()"><i class="fa-solid fa-chevron-down"></i></button>
     </div>
     <div class="bloc-categorie">
         <h2 class="title-font title-color">CAPACITÉ</h2>
@@ -42,10 +42,18 @@
             <li class="custom-li"><i class="fas fa-tv"></i> Télévision</li>
             <!-- ... Ajoutez d'autres éléments ici ... -->
         </ul>
+
+        <button class="expand-button-service" onclick="toggleExpandService()"><i class="fa-solid fa-chevron-down"></i></button>
     </div>
 
     <div class="bloc-categorie">
         <h2 class="title-font title-color">TARIFS</h2>
+        <ul class="bloc-liste custom-ul"> <!-- Ajout de la classe "custom-ul" -->
+            <li class="custom-li"><i class="fas fa-calendar-alt"></i> Semaine Moyenne saison : 550€</li>
+            <li class="custom-li"><i class="fas fa-moon"></i> Nuitée Moyenne saison : 85€</li>
+            <li class="custom-li"><i class="fas fa-sun"></i> Semaine Haute Saison : 650€</li>
+            <li class="custom-li"><i class="fas fa-star"></i> Nuitée Haute Saison : 110€</li>
+        </ul>
         <ul class="bloc-liste custom-ul"> <!-- Ajout de la classe "custom-ul" -->
             <li class="custom-li"><i class="fas fa-calendar-alt"></i> Semaine Moyenne saison : 550€</li>
             <li class="custom-li"><i class="fas fa-moon"></i> Nuitée Moyenne saison : 85€</li>
