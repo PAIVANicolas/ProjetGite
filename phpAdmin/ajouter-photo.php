@@ -1,39 +1,40 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/ajoutphoto.css">
 <div class="bloc-ajout-photo">
     <form id="imageForm">
-        <div class="form-group">
-            <label for="section">Section :</label>
-            <select id="section" name="section">
+        <div class="form-img">
+            <div class="form-group">
+                <label for="section">Section :</label>
+                <select id="section" name="section">
 
-                <?php
-                require('../assets/bdd/config.php');
+                    <?php
+                    require('../assets/bdd/config.php');
 
-                $sql = "SHOW COLUMNS FROM Image WHERE Field='section'";
-                $result = $conn->query($sql);
+                    $sql = "SHOW COLUMNS FROM Image WHERE Field='section'";
+                    $result = $conn->query($sql);
 
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    $enumList = explode(",", str_replace("'", "", substr($row['Type'], 5, (strlen($row['Type'])-6))));
-                    foreach($enumList as $value)
-                        echo "<option value=\"$value\">$value</option>";
-                }
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+                        $enumList = explode(",", str_replace("'", "", substr($row['Type'], 5, (strlen($row['Type'])-6))));
+                        foreach($enumList as $value)
+                            echo "<option value=\"$value\">$value</option>";
+                    }
 
-                $conn->close();
-                ?>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="image">Image :</label>
-            <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage(event)">
-        </div>
+                    $conn->close();
+                    ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="image">Image :</label>
+                <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage(event)">
+            </div>
 
-        <div class="form-group">
-            <label for="imageAlt">Description de l'image :</label>
-            <input type="text" id="imageAlt" name="image_alt" required>
-        </div>
-        <button type="submit">Ajouter l'image</button>
+            <div class="form-group">
+                <label for="imageAlt">Description de l'image :</label>
+                <input type="text" id="imageAlt" name="image_alt" required>
+            </div>
+            <button type="submit">Ajouter l'image</button>
     </form>
-    <img id="imagePreview">
+    <img id="imagePreview"></div>
 </div>
 
 <script>
