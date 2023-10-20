@@ -1,38 +1,48 @@
+/* Styles de base */
 @import url("rules.css");
 
-.bloc-general{
+.bloc-general {
     width: 100vw;
 }
+
 .bloc-categorie {
     display: flex;
     flex-direction: column;
-    align-items: left; /* Pour aligner verticalement le titre et la liste */
+    align-items: left;
     flex-wrap: wrap;
     margin: 1%;
-    border: 1px solid #eaeaea; /* Ajoute une bordure */
-    border-radius: 10px; /* Ajoute des coins arrondis */
-    padding: 2%; /* Ajoute un espacement interne */
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 2%;
     margin-bottom: 2%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.reserve-button{
-    background-color: #007bff; /* Couleur de fond du bouton */
+.paragraph {
+    max-height: 3vh;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in;
+}
+
+.expanded {
+    max-height: 100vh;
+}
+
+.reserve-button {
+    background-color: #007bff;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin: 0 auto; /* Centre le bouton horizontalement */
-
+    margin: 0 auto;
 }
 
 .custom-ul {
-    list-style-type: none; /* Enlève les puces */
-    padding-left: 0; /* Enlève le padding à gauche qui est généralement ajouté pour les puces */
-
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.custom-li{
+.custom-li {
     padding-left: 4%;
 }
 
@@ -46,5 +56,90 @@
 }
 
 .title-color {
-    color: #D2691E; /* Terre Cuite */
+    color: #D2691E;
+}
+
+/* Styles de base */
+@import url("rules.css");
+
+.bloc-general {
+    width: 100vw;
+}
+
+.bloc-categorie {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-wrap: wrap;
+    margin: 1%;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 2%;
+    margin-bottom: 2%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.expand-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: blue;
+    margin-top: 10px;
+}
+
+.expanded p {
+    display: block;
+}
+
+.collapsed p:not(:first-child) {
+    display: none;
+}
+
+.reserve-button {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.custom-ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.custom-li {
+    padding-left: 4%;
+}
+
+.bloc-liste {
+    display: flex;
+    flex-direction: row;
+}
+
+.title-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.title-color {
+    color: #D2691E;
+}
+
+/* Media query pour écrans plus petits (par exemple, max-width: 768px) */
+@media (max-width: 768px) {
+    .bloc-categorie {
+        padding: 1%;
+        flex-wrap: nowrap; /* Empêche le contenu de déborder de la boîte */
+        overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+    }
+
+    .reserve-button {
+        margin-top: 15px;
+    }
+
+    .custom-li {
+        padding-left: 2%;
+    }
 }
