@@ -8,9 +8,9 @@ expandButton.addEventListener("click", () => {
     
     if (isExpanded) {
         paragraph.classList.add("expanded");
-        expandButton.textContent = "Réduire";
+        expandButton.innerHTML = '<i class="fa-solid fa-chevron-up"></i>'; // Icône "Réduire"
     } else {
         paragraph.classList.remove("expanded");
-        expandButton.textContent = "Afficher plus";
+        expandButton.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'; // Icône "Dérouler"
     }
 });
