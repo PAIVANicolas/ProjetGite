@@ -34,8 +34,10 @@
 </div>
 
 <?php include_once("./php/footer.php"); ?>
+
 <script src="./assets/js/mode.js"></script>
 <script src="./assets/js/carrousel.js"></script>
+<script src="./assets/js/afficher-info.js"></script>
 
 
 </body>
