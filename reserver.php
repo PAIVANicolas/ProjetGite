@@ -22,32 +22,32 @@
 
     <div class="form-group">
         <label for="clientName" class="form-label">Nom:</label>
-        <input type="text" id="clientName" name="client_name" class="form-input"  placeholder="Nom" >
+        <input type="text" id="clientName" name="client_name" class="form-input"  placeholder="Nom" required="true" >
     </div>
 
     <div class="form-group">
         <label for="clientSurname" class="form-label">Prénom :</label>
-        <input type="text" id="clientSurname" name="client_surname" class="form-input"  placeholder="Prénom" >
+        <input type="text" id="clientSurname" name="client_surname" class="form-input"  placeholder="Prénom" required="true" >
     </div>
 
     <div class="form-group">
         <label for="startDate" class="form-label">Date de Début:</label>
-        <input type="date" id="startDate" name="start_date" class="form-input" >
+        <input type="date" id="startDate" name="start_date" class="form-input" required="true" >
     </div>
 
     <div class="form-group">
         <label for="endDate" class="form-label">Date de Fin:</label>
-        <input type="date" id="endDate" name="end_date" class="form-input" disabled="true" >
+        <input type="date" id="endDate" name="end_date" class="form-input" disabled="true" required="true" >
     </div>
 
     <div class="form-group">
         <label for="clientEmail" class="form-label">Email:</label>
-        <input type="email" id="clientEmail" name="client_email" class="form-input" >
+        <input type="email" id="clientEmail" name="client_email" class="form-input" required="true">
     </div>
 
     <div class="form-group">
         <label for="clientPhone" class="form-label">Téléphone:</label>
-        <input type="tel" id="clientPhone" name="client_phone" class="form-input">
+        <input type="tel" id="clientPhone" name="client_phone" class="form-input" required="true">
     </div>
 
     <div class="button-group">
