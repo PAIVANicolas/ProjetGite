@@ -22,7 +22,7 @@
         Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.
         </p>
         <button class="reserve-button"><a class="submit" href="./reserver.php">Réserver</a></button>
-        <button class="expand-button">Afficher plus</button>
+        <button class="expand-button"><i class="fa-solid fa-chevron-down"></i></button>
     </div>
     <div class="bloc-categorie">
         <h2 class="title-font title-color">CAPACITÉ</h2>
