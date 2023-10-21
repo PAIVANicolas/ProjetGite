@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 11 oct. 2023 à 08:43
+-- Généré le : sam. 21 oct. 2023 à 16:42
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -43,7 +43,8 @@ CREATE TABLE `Image` (
                          `Id_Image` int(11) NOT NULL,
                          `image_path` varchar(250) DEFAULT NULL,
                          `image_alt` varchar(250) DEFAULT NULL,
-                         `is_featured` enum('yes','no') NOT NULL
+                         `is_featured` enum('yes','no') NOT NULL,
+                         `section` enum('Accueil','réservation','transport','activités','repas','carrousel') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -54,8 +55,8 @@ CREATE TABLE `Image` (
 
 CREATE TABLE `reservations` (
                                 `id` int(11) NOT NULL,
-                                `start_date` date NOT NULL,
-                                `end_date` date NOT NULL,
+                                `start_date` datetime NOT NULL,
+                                `end_date` datetime NOT NULL,
                                 `client_name` varchar(255) NOT NULL,
                                 `client_email` varchar(255) NOT NULL,
                                 `client_phone` varchar(20) DEFAULT NULL,
@@ -70,8 +71,8 @@ CREATE TABLE `reservations` (
 --
 
 INSERT INTO `reservations` (`id`, `start_date`, `end_date`, `client_name`, `client_email`, `client_phone`, `status`, `created_at`, `updated_at`, `client_surname`) VALUES
-                                                                                                                                                                       (17, '2023-10-05', '2023-10-06', 'Ad', 'o@gma.com', '0602267210', 'en attente', '2023-10-05 12:06:00', '2023-10-10 16:09:16', 'Ju'),
-                                                                                                                                                                       (18, '2023-10-06', '2023-10-07', 'Adap', 'o@gma.com', '0602267210', 'en attente', '2023-10-05 12:09:58', '2023-10-05 12:09:58', 'Ju');
+                                                                                                                                                                       (26, '2023-10-21 00:00:00', '2023-10-22 00:00:00', 'Adap', 'o@gma.com', '0602267210', 'en attente', '2023-10-20 08:34:13', '2023-10-20 08:34:13', 'Ubar'),
+                                                                                                                                                                       (27, '2023-10-26 00:00:00', '2023-10-29 00:00:00', 'nn', 'o@gma.com', '0989728191', 'en attente', '2023-10-20 09:00:56', '2023-10-20 09:00:56', 'nnj');
 
 -- --------------------------------------------------------
 
@@ -142,7 +143,7 @@ ALTER TABLE `Image`
 -- AUTO_INCREMENT pour la table `reservations`
 --
 ALTER TABLE `reservations`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT pour la table `Utilisateur`
