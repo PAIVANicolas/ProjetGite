@@ -1,4 +1,4 @@
-<button id="reset-button" style="display: none" class="reset-button" onclick="resetCards()">Annuler</button>
+<button id="reset-button" style="display: none" class="reset-button" id="reset-button" onclick="resetCards()">Annuler</button>
 
 <div class="card-container">
     <div class="card">
@@ -7,6 +7,10 @@
     </div>
     <div class="card">
         <div class="card-title">Inserter des images</div>
+        <div class="card-content-inserer-image" hidden="hidden">
+            <?php include ("../phpAdmin/ajouter-photo.php");?>
+        </div>
+
         <button class="card-button" onclick="expandCard(2)">Ouvrir</button>
     </div>
     <div class="card">
@@ -14,7 +18,3 @@
         <button class="card-button" onclick="expandCard(3)">Ouvrir</button>
     </div>
 </div>
-
-
-
-

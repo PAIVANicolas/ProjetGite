@@ -56,6 +56,14 @@
             });
     });
 
+    console.log("non");
+    document.getElementById('cancelButton').addEventListener('click', function() {
+        console.log("trouvé");
+        document.getElementById('imageForm').reset();
+        document.getElementById('imagePreview').style.display = 'none';  // Cache l'aperçu de l'image
+    });
+
+
     function previewImage(event) {
         var imagePreview = document.getElementById('imagePreview');
         imagePreview.src = URL.createObjectURL(event.target.files[0]);
