@@ -13,7 +13,7 @@ if ($resultcalendrier->num_rows > 0) {
         $events[] = array(
             'title' => $row["client_name"] . ' ' . $row["client_surname"],
             'start' => $row["start_date"],
-            'end' => $end_date->format('Y-m-d'),
+            'end' => $end_date->format('Y-m-d H:i:s'),
             'color' => ($row["status"] == 'rejetée') ? 'red' : (($row["status"] == 'confirmée') ? 'green' : 'orange')
         );
     }
