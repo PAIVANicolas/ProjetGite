@@ -54,7 +54,7 @@ updateClasses();
 next.addEventListener('click', () => { 
   index++;
   if (index >= imgs.length) {
-    index = 0; // Réinitialise l'index à zéro lorsque la dernière image est atteinte
+    index = 0;
   }
   layout();
   updateClasses();
@@ -63,7 +63,7 @@ next.addEventListener('click', () => {
 prev.addEventListener('click', () => { 
   index--;
   if (index < 0) {
-    index = imgs.length - 1; // Déplace l'index vers la dernière image lorsque l'utilisateur passe de la première image à la précédente
+    index = imgs.length - 1;
   }
   layout();
   updateClasses();

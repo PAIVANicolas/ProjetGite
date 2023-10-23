@@ -24,3 +24,4 @@ function toggleExpandService() {
         expandButton.innerHTML = '<i class="fa-solid fa-chevron-up"></i>'; // Icône "Réduire"
     }
 }
+
