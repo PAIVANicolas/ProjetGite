@@ -9,8 +9,9 @@ $events = array();
 if ($resultcalendrier->num_rows > 0) {
     while($row = $resultcalendrier->fetch_assoc()) {
         $end_date = new DateTime($row["end_date"]);
-        $end_date->modify('+1 day');
+
         $events[] = array(
+            'id' => $row["id"],
             'title' => $row["client_name"] . ' ' . $row["client_surname"],
             'start' => $row["start_date"],
             'end' => $end_date->format('Y-m-d H:i:s'),

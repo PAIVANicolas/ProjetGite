@@ -22,10 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     calendar = new FullCalendar.Calendar(calendarEl, {
+        eventClick: function(info) {
+            var confirmDelete = confirm("Voulez-vous supprimer cette réservation ?");
+            if (confirmDelete) {
+                deleteEvent(info.event.id);
+            }
+        },
         locale: 'fr',
         initialView: 'timeGridWeek',
         headerToolbar: toolbarOptions,
         eventOverlap: true,
+        allDaySlot: false,
         buttonText: {
             today : 'aujourd\'hui',
             day : 'jour',
@@ -45,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
     calendar.render();
 });
 
