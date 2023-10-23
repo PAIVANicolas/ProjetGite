@@ -23,8 +23,6 @@
 <?php include_once("./php/nav.php"); ?>
 <?php include_once("./php/carrousel.php"); ?>
 
-
-
 <?php include_once("./php/informationsLocation.php"); ?>
 
 <div class="container-map">
@@ -39,10 +37,6 @@
 <script src="./assets/js/carrousel.js"></script>
 <script src="./assets/js/afficher-info.js"></script>
 
-
 </body>
-
-
-
 
 </html>
