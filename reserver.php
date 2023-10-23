@@ -58,7 +58,7 @@
     </div>
 
     <div class="messageErreur">
-        <?php if ($message) {
+        <?php if (isset($message)) {
             echo "<p class='message'>$message</p>";
         }?>
     </div>
@@ -94,7 +94,7 @@
 
 
     function sendEmail() {
-        <?php if ($isFormValid): ?>
+        <?php if (isset($isFormValid)): ?>
         let clientName = document.getElementById('clientName').value;
 
 

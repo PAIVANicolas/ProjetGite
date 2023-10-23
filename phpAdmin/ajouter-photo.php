@@ -39,9 +39,9 @@
 
 <script>
     document.getElementById('imageForm').addEventListener('submit', function(e) {
-        e.preventDefault();  // Empêche le comportement d'envoi normal du formulaire
+        e.preventDefault();
 
-        var formData = new FormData(this);  // Crée un objet FormData avec les données du formulaire
+        var formData = new FormData(this);
 
         fetch('upload.php', {
             method: 'POST',
@@ -49,7 +49,7 @@
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);  // Affiche la réponse du serveur
+                console.log(data);
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -60,7 +60,7 @@
     document.getElementById('cancelButton').addEventListener('click', function() {
         console.log("trouvé");
         document.getElementById('imageForm').reset();
-        document.getElementById('imagePreview').style.display = 'none';  // Cache l'aperçu de l'image
+        document.getElementById('imagePreview').style.display = 'none';
     });
 
 
@@ -68,9 +68,9 @@
         var imagePreview = document.getElementById('imagePreview');
         imagePreview.src = URL.createObjectURL(event.target.files[0]);
         imagePreview.onload = function() {
-            URL.revokeObjectURL(imagePreview.src) // Free up memory
+            URL.revokeObjectURL(imagePreview.src)
         }
-        imagePreview.style.display = 'block'; // Show image preview
+        imagePreview.style.display = 'block';
     }
 </script>
 
