@@ -1,6 +1,7 @@
 <?php
 require('../assets/bdd/config.php');
-session_start();
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time'])) {
 
@@ -9,7 +10,7 @@ if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time
     $startTime = $_POST['start_time'];
     $endTime = $_POST['end_time'];
 
-    echo $startTime +" "+$endTime;
+    echo $startTime . " " . $endTime;
     $sql = "UPDATE reservations SET status=?";
 
     if ($startTime && $endTime) {

@@ -28,7 +28,9 @@ function updateReservation(id, status, startTime, endTime) {
     xhr.open("POST", "update-reservation.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
+        console.log("test");
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            console.log("test ok");
             calendar.refetchEvents();
         }
     }
