@@ -1,5 +1,9 @@
 <?php
 require('../assets/bdd/config.php');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 
 if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time'])) {
 
@@ -23,6 +27,7 @@ if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time
     $startTime = $existingStartDate . ' ' . $startTime;
     $endTime = $existingEndDate . ' ' . $endTime;
 
+
     $checkOverlapSQL = "SELECT id FROM reservations 
                         WHERE ((start_date < ? AND end_date > ?) 
                         OR (start_date < ? AND end_date > ?) 
@@ -36,7 +41,7 @@ if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time
     $checkStmt->store_result();
 
     if ($checkStmt->num_rows > 0) {
-        echo "overlap"; // Il y a un chevauchement
+        echo "overlap";
         $checkStmt->close();
         $conn->close();
         exit;
@@ -47,7 +52,7 @@ if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time
     $sql = "UPDATE reservations SET status=?";
 
     if ($startTime && $endTime) {
-        $sql .= ", start_date=CONCAT(DATE(start_date), ' ', ?), end_date=CONCAT(DATE(end_date), ' ', ?)";
+        $sql .= ", start_date=?, end_date=?";
     }
 
     $sql .= " WHERE id=?";

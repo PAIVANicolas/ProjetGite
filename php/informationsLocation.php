@@ -15,6 +15,10 @@
             Pour des vacances authentiques et au grand air, dans un <strong>lieu paisible à l'écart de la circulation</strong>, vous vous sentirez chez vous tout en étant dépaysé.
         </div>
 
+        Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.
+
+        Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.
+        </p>
         <button class="reserve-button"><a class="submit" href="./reserver.php">Réserver</a></button>
         <button class="expand-button" onclick="toggleExpand()"><i class="fa-solid fa-chevron-down"></i></button>
     </div>
@@ -34,6 +38,7 @@
             <li class="custom-li"><i class="fas fa-parking"></i> Parking</li>
             <li class="custom-li"><i class="fas fa-chair"></i> Terrasse</li>
             <li class="custom-li"><i class="fas fa-tv"></i> Télévision</li>
+            <!-- ... Ajoutez d'autres éléments ici ... -->
         </ul>
 
         <button class="expand-button-service" onclick="toggleExpandService()"><i class="fa-solid fa-chevron-down"></i></button>

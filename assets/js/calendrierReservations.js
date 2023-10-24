@@ -29,11 +29,13 @@ function updateReservation(id, status, startTime, endTime) {
     xhr.open("POST", "update-reservation.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
+        console.log(this.responseText);
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             if (this.responseText === "overlap") {
                 alert("Il y a un chevauchement avec un autre rendez-vous, merci de le supprimer ou d'adapter l'heure du rendez-vous");
             } else if (this.responseText === "success") {
                 calendar.refetchEvents();
+                alert("Succès");
             } else {
                 alert("Une erreur est survenue. Veuillez réessayer.");
             }
