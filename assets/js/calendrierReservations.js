@@ -16,10 +16,11 @@ function deleteEvent(eventId) {
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            refreshTable();
             calendar.refetchEvents();
         }
     }
-    console.log(eventId);
+
     xhr.send("id=" + eventId);
 }
 
@@ -34,6 +35,7 @@ function updateReservation(id, status, startTime, endTime) {
             if (this.responseText === "overlap") {
                 alert("Il y a un chevauchement avec un autre rendez-vous, merci de le supprimer ou d'adapter l'heure du rendez-vous");
             } else if (this.responseText === "success") {
+                refreshTable();
                 calendar.refetchEvents();
                 alert("Succès");
             } else {

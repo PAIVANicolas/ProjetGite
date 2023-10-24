@@ -1,8 +1,5 @@
 <?php
 require('../assets/bdd/config.php');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 
 if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time'])) {

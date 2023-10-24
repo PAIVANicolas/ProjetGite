@@ -1,4 +1,5 @@
 <?php
+require('../assets/bdd/config.php');
 if ($resulttableau->num_rows > 0) {
     while($row = $resulttableau->fetch_assoc()) {
         echo "<tr>";
@@ -16,5 +17,5 @@ if ($resulttableau->num_rows > 0) {
 } else {
     echo "<tr><td colspan='6'>Aucune réservation trouvée</td></tr>";
 }
-$conn->close();
+
 ?>
