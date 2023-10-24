@@ -1,8 +1,6 @@
 <?php
 require('../assets/bdd/config.php');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 $requetecalendrier = "SELECT * FROM reservations where status !='rejetée'";
 $requetetableau = "SELECT * FROM reservations where status !='confirmée'";
 $resultcalendrier = $conn->query($requetecalendrier);
@@ -23,6 +21,7 @@ if ($resultcalendrier->num_rows > 0) {
         );
     }
     $resultcalendrier->data_seek(0);
+    echo json_encode($events);
 }
 
 ?>

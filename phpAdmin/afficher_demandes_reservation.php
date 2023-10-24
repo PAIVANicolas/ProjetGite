@@ -1,5 +1,8 @@
 <?php
 require('../assets/bdd/config.php');
+
+$requetetableau = "SELECT * FROM reservations where status !='confirmée'";
+$resulttableau = $conn->query($requetetableau);
 if ($resulttableau->num_rows > 0) {
     while($row = $resulttableau->fetch_assoc()) {
         echo "<tr>";
@@ -17,5 +20,4 @@ if ($resulttableau->num_rows > 0) {
 } else {
     echo "<tr><td colspan='6'>Aucune réservation trouvée</td></tr>";
 }
-
 ?>
