@@ -14,12 +14,8 @@
             Le <strong>jardin</strong>, très agréable, est non clos. Pourvu d'un bar extérieur, d'un barbecue, d'un évier et de mobilier de jardin, vous pourrez y prendre vos repas ou vous reposer à l'ombre de la glycine. Un WC et une douche complètent l'équipement. &nbsp;<br><br>
             Pour des vacances authentiques et au grand air, dans un <strong>lieu paisible à l'écart de la circulation</strong>, vous vous sentirez chez vous tout en étant dépaysé.
         </div>
-
-        Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.
-
-        Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.
         </p>
-        <button class="reserve-button"><a class="submit" href="./reserver.php">Réserver</a></button>
+        <button class="reserve-button"><a class="reserver" href="./reserver.php">Réserver</a></button>
         <button class="expand-button" onclick="toggleExpand()"><i class="fa-solid fa-chevron-down"></i></button>
     </div>
     <div class="bloc-categorie">
@@ -69,3 +65,5 @@
     </div>
 
 </div>
+
+
