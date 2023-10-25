@@ -16,7 +16,6 @@
 
     <?php
         require('../assets/bdd/config.php');
-        include_once ("../phpAdmin/afficher-reservations-calendrier.php");
     ?>
 
     <script src="../assets/js/fullCalendar.js"></script>
@@ -49,7 +48,6 @@
         </table>
     </div>
 </div>
-
 <script src="../assets/js/calendrierReservations.js"></script>
 <?php include_once("../php/footer.php"); ?>
 </body>

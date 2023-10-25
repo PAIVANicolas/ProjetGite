@@ -66,4 +66,9 @@ async function refreshTable() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    refreshTable();
+});
+
+
 setInterval(refreshTable, 5000);
