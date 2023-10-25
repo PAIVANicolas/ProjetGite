@@ -28,65 +28,20 @@
     max-height: 100vh;
 }
 
-.reserve-button {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 0 auto;
-}
-
-.custom-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.custom-li {
-    padding-left: 4%;
-}
-
-.bloc-liste {
-    display: flex;
-    flex-direction: row;
-}
-
-.title-font {
-    font-family: 'Playfair Display', serif;
-}
-
-.title-color {
-    color: #D2691E;
-}
-
-/* Styles de base */
-@import url("rules.css");
-
-.bloc-general {
-    width: 100vw;
-}
-
-.bloc-categorie {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    flex-wrap: wrap;
-    margin: 1%;
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
-    padding: 2%;
-    margin-bottom: 2%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
 .expand-button {
     cursor: pointer;
     background: none;
     border: none;
-    text-decoration: underline;
     color: blue;
-    margin-top: 10px;
+    margin-top: 2vh;
+    font-size: 1.2rem;
+    transition: font-size 0.4s ease-in; /* Transition sur la propriété font-size */
 }
+
+.expand-button:hover {
+    font-size: 1.7rem;
+}
+
 
 .expanded p {
     display: block;
@@ -96,13 +51,24 @@
     display: none;
 }
 
+
 .reserve-button {
     background-color: #007bff;
     border: none;
+    border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     margin: 0 auto;
+}
+
+.reserve-button:hover {
+    background-color: #3295ff;
+
+}
+.reserver{
+    color: #000;
+    text-decoration:none;
 }
 
 .custom-ul {
@@ -126,6 +92,7 @@
 .title-color {
     color: #D2691E;
 }
+
 
 /* Media query pour écrans plus petits (par exemple, max-width: 768px) */
 @media (max-width: 768px) {
