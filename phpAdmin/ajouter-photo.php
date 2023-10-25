@@ -5,7 +5,7 @@
             <div class="form-group">
                 <label for="section">Section :</label>
                 <select id="section" name="section">
-                    <?php include_once ('../phpAdmin/ajouter-photo-action.php');?>
+                    <?php include_once ('../phpAdmin/afficher-sections-image.php');?>
                 </select>
             </div>
             <div class="form-group">

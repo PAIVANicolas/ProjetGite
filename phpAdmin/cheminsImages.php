@@ -1,5 +1,5 @@
 <?php
-class JoursSemaine {
-    const CHEMIN_IMAGES_COURROUSEL = './assets/images/carrousel';
+class CHEMIN_IMAGES {
+    const CHEMIN_IMAGES_COURROUSEL = '../assets/images/carrousel';
 }
 ?>

@@ -3,24 +3,17 @@ document.getElementById('imageForm').addEventListener('submit', function(e) {
 
     var formData = new FormData(this);
 
-    fetch('ajouter-image-action.php', {
+    fetch('ajouter-photo-action.php', {
         method: 'POST',
         body: formData,
     })
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
             console.log(data);
         })
         .catch(error => {
             console.error('Error:', error);
         });
-});
-
-
-document.getElementById('cancelButton').addEventListener('click', function() {
-    console.log("trouvé");
-    document.getElementById('imageForm').reset();
-    document.getElementById('imagePreview').style.display = 'none';
 });
 
 
