@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include_once("../phpAdmin/connectionCheck.php"); ?>
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="../favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../assets/css/rules.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/carte.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/nav.css">

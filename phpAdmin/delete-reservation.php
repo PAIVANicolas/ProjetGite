@@ -3,16 +3,15 @@ require('../assets/bdd/config.php');
 
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
-
-    $sql = "DELETE FROM reservations WHERE id=?";
+    $sql = "UPDATE reservations SET status='rejetée' WHERE id=?";
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {
-        echo "Record deleted successfully";
+        echo "Record updated successfully";
     } else {
-        echo "Error deleting record: " . $conn->error;
+        echo "Error updating record: " . $conn->error;
     }
 
     $stmt->close();

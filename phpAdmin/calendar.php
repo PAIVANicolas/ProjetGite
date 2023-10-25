@@ -23,8 +23,6 @@
         <?php echo "var eventsData = " . json_encode($events) . ";"; ?>
     </script>
 </head>
-
-
 <body>
 <?php include_once("../php/header.php"); ?>
 <?php include_once("../phpAdmin/navAdmin.php"); ?>

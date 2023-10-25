@@ -22,6 +22,9 @@ if ($resultcalendrier->num_rows > 0) {
     }
     $resultcalendrier->data_seek(0);
     echo json_encode($events);
+}else {
+    $events[] = array();
+    echo json_encode($events);
 }
 
 ?>

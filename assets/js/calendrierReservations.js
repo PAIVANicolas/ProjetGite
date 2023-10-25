@@ -50,19 +50,25 @@ async function refreshTable() {
     try {
         let responseTable = await fetch('../phpAdmin/afficher_demandes_reservation.php');
         let responseCalendar = await fetch('../phpAdmin/afficher-reservations-calendrier.php');
+
         if (!responseTable.ok) {
-            throw new Error('Network response was not ok ' + responseTable.statusText);
+            throw new Error('Network response was not ok ');
         }
         let data = await responseTable.text();
-        let eventsData = await responseCalendar.json();
 
-        document.querySelector('.tableau-reservations tbody').innerHTML = data;
-        calendar.removeAllEvents();
-        eventsData.forEach(event => {
-            calendar.addEvent(event);
-        });
+
+
+        if(responseCalendar){
+            let eventsData = await responseCalendar.json();
+            document.querySelector('.tableau-reservations tbody').innerHTML = data;
+            calendar.removeAllEvents();
+            eventsData.forEach(data => {
+                calendar.addEvent(data);
+            });
+        }
+
     } catch (error) {
-        console.error('Erreur lors de la récupération des réservations pour');
+        console.error('Erreur lors de la récupération des réservations pour'+error);
     }
 }
 

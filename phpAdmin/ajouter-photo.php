@@ -5,22 +5,7 @@
             <div class="form-group">
                 <label for="section">Section :</label>
                 <select id="section" name="section">
-
-                    <?php
-                    require('../assets/bdd/config.php');
-
-                    $sql = "SHOW COLUMNS FROM Image WHERE Field='section'";
-                    $result = $conn->query($sql);
-
-                    if ($result->num_rows > 0) {
-                        $row = $result->fetch_assoc();
-                        $enumList = explode(",", str_replace("'", "", substr($row['Type'], 5, (strlen($row['Type'])-6))));
-                        foreach($enumList as $value)
-                            echo "<option value=\"$value\">$value</option>";
-                    }
-
-                    $conn->close();
-                    ?>
+                    <?php include_once ('../phpAdmin/ajouter-photo-action.php');?>
                 </select>
             </div>
             <div class="form-group">
@@ -37,40 +22,4 @@
     <img id="imagePreview"></div>
 </div>
 
-<script>
-    document.getElementById('imageForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        var formData = new FormData(this);
-
-        fetch('upload.php', {
-            method: 'POST',
-            body: formData,
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    });
-
-    console.log("non");
-    document.getElementById('cancelButton').addEventListener('click', function() {
-        console.log("trouvé");
-        document.getElementById('imageForm').reset();
-        document.getElementById('imagePreview').style.display = 'none';
-    });
-
-
-    function previewImage(event) {
-        var imagePreview = document.getElementById('imagePreview');
-        imagePreview.src = URL.createObjectURL(event.target.files[0]);
-        imagePreview.onload = function() {
-            URL.revokeObjectURL(imagePreview.src)
-        }
-        imagePreview.style.display = 'block';
-    }
-</script>
-
+<script src="../assets/js/ajouterImage.js"></script>
