@@ -31,7 +31,7 @@
     overflow: hidden;  /* pour masquer les bordures et le contenu dépassant */
     border: 2px solid #ddd;  /* ajuster selon vos préférences de couleur et de largeur */
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 1.3rem;
     text-align: left;
 }
 
@@ -111,6 +111,30 @@
     flex-direction: column; /* pour les empiler verticalement */
     align-items: center; /* centre les éléments horizontalement */
     gap: 10px; /* espace entre les éléments */
-    padding: 10px;
-    width: 100%;
+    padding: 1%;
+    width: 100hw;
 }
+
+
+/* Pour les écrans de taille moyenne (par exemple, tablettes) */
+@media screen and (max-width: 768px) {
+    .tableau-reservations {
+        flex-direction: column; /* Affiche les éléments en colonnes */
+    }
+    .tableau-reservations th, .tableau-reservations td {
+        font-size: 1.4rem; /* Réduire la taille de la police pour un affichage plus compact */
+        padding: 1%; /* Réduire l'espacement entre les cellules */
+    }
+}
+
+/* Pour les écrans de petite taille (par exemple, smartphones) */
+@media screen and (max-width: 480px) {
+    .tableau-reservations th, .tableau-reservations td {
+        font-size: 12px; /* Réduire encore la taille de la police */
+        padding: 8px; /* Réduire davantage l'espacement entre les cellules */
+    }
+    .tableau-reservations button {
+        padding: 4px 8px; /* Réduire la taille des boutons */
+    }
+}
+
