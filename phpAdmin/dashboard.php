@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/nav.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/toggle.css"/>
     <title>Tableau de bord</title>
 </head>
 
