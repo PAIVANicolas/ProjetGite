@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/reserverform.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/toggle.css"/>
 </head>
 <body>
 <?php include_once("./php/header.php"); ?>
@@ -47,7 +48,7 @@
 
     <div class="form-group">
         <label for="clientPhone" class="form-label">Téléphone:</label>
-        <input type="tel" id="clientPhone" name="client_phone" class="form-input" required="true">
+        <input type="tel" id="clientPhone" name="client_phone" class="form-input" required="true" placeholder="0600000000">
     </div>
 
     <div class="button-group">

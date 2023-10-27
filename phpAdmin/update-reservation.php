@@ -24,7 +24,6 @@ if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time
     $startTime = $existingStartDate . ' ' . $startTime;
     $endTime = $existingEndDate . ' ' . $endTime;
 
-
     $checkOverlapSQL = "SELECT id FROM reservations 
                         WHERE ((start_date < ? AND end_date > ?) 
                         OR (start_date < ? AND end_date > ?) 
@@ -72,7 +71,5 @@ if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time
 
     $stmt->close();
 }
-
 $conn->close();
-
 ?>

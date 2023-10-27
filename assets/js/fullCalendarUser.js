@@ -19,12 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     calendar = new FullCalendar.Calendar(calendarEl, {
-        eventClick: function(info) {
-            var confirmDelete = confirm("Voulez-vous supprimer cette réservation ?");
-            if (confirmDelete) {
-                deleteEvent(info.event.id);
-            }
-        },
+
         locale: 'fr',
         initialView: 'timeGridWeek',
         headerToolbar: toolbarOptions,
@@ -39,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         events: eventsData, height: 'auto',
         contentHeight: 'auto',
         aspectRatio: 1.8,
-
 
         windowResize: function(view, element) {
             if (window.innerWidth < 768) {
