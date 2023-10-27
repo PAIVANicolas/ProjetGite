@@ -69,3 +69,9 @@ Menu qui mène sur des ancres de page ou des pages.
 (Calendrier pour a visu des disponibilitÈ, administrÈ donc par l'administrateur, Utiliser CMS)
 Page administration avec login, texte prÈsentation, tarifs(, gestion calendrier), gestion des photos, contact.
 Optimisation des photos ‡ l'upload. Test greenIT (pluggin chrome).
+
+# Couleurs du site
+### Vert : 2C7D2D
+### Gris foncé : 3A3A3A
+### Jaune clair : F9CE68
+### Violet : 7A6EA8

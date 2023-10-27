@@ -19,10 +19,11 @@
         require('../assets/bdd/config.php');
     ?>
 
-    <script src="../assets/js/fullCalendar.js"></script>
     <script>
         <?php echo "var eventsData = " . json_encode($events) . ";"; ?>
     </script>
+    <script src="../assets/js/fullCalendar.js"></script>
+
 </head>
 <body>
 <?php include_once("../php/header.php"); ?>

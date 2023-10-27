@@ -1,6 +1,11 @@
 /* Importez les variables CSS de rules.css */
 @import url("rules.css");
 
+#calendar{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 .reservation-form {
     display: flex;
     flex-direction: column;

@@ -14,10 +14,18 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/reserverform.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/toggle.css"/>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 </head>
 <body>
 <?php include_once("./php/header.php"); ?>
 
+<div id="calendar">
+    <script src="./assets/js/fullCalendarUser.js"></script>
+</div>
+
+<script>
+    <?php echo "var eventsData = " . json_encode($events) . ";"; ?>
+</script>
 
 <form action="./php/reserveraction.php" method="POST" class="reservation-form">
 
@@ -68,6 +76,8 @@
 </form>
 
 </body>
+
+<script src="./assets/js/calendrierVisiteur.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const startDateInput = document.getElementById('startDate');
@@ -130,4 +140,5 @@
     }
 
 </script>
+
 </html>

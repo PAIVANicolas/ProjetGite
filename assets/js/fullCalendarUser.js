@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
         initialView: 'timeGridWeek',
         headerToolbar: toolbarOptions,
         eventOverlap: true,
+        eventContent: function(arg) {
+            // Retourne du contenu HTML personnalisé pour chaque événement,
+            // sans date ou heure.
+            return {
+                html: '<div class="fc-event-title-custom">' + arg.event.title + '</div>'
+            };
+        },
         allDaySlot: false,
         buttonText: {
             today : 'aujourd\'hui',
@@ -46,4 +53,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     calendar.render();
 });
-
