@@ -4,9 +4,9 @@
 /* Variables pour les couleurs du site */
 :root {
     --background-color-light: #ffffff; /* Couleur de fond en mode clair */
-    --text-color-light: #333333; /* Couleur du texte en mode clair */
+    --text-color-light: #3A3A3A; /* Couleur du texte en mode clair */
 
-    --background-color-dark: #333333; /* Couleur de fond en mode sombre */
+    --background-color-dark: #000; /* Couleur de fond en mode sombre */
     --text-color-dark: #ffffff; /* Couleur du texte en mode sombre */
 
     /* Barre de navigation en mode light */
@@ -14,32 +14,52 @@
     --nav-text-color-light: #fff; /* Couleur du texte de la barre de navigation en mode light */
 
     /* Barre de navigation en mode dark */
-    --nav-background-color-dark: #111; /* Couleur de fond de la barre de navigation en mode dark */
+    --nav-background-color-dark: #000; /* Couleur de fond de la barre de navigation en mode dark */
     --nav-text-color-dark: #fff; /* Couleur du texte de la barre de navigation en mode dark */
 
     /* Footer en mode light */
-    --footer-background-color-light: #f0f0f0; /* Couleur de fond du footer en mode light */
+    --footer-background-color-light: #F9CE68; /* Couleur de fond du footer en mode light */
     --footer-text-color-light: #333333; /* Couleur du texte du footer en mode light */
 
     /* Footer en mode dark */
-    --footer-background-color-dark: #333; /* Couleur de fond du footer en mode dark */
+    --footer-background-color-dark: #eea03b; /* Couleur de fond du footer en mode dark */
     --footer-text-color-dark: #fff; /* Couleur du texte du footer en mode dark */
 
     /* En-tête en mode light */
-    --header-background-color-light: #333; /* Couleur de fond de l'en-tête en mode light */
+    --header-background-color-light: #3A3A3A; /* Couleur de fond de l'en-tête en mode light */
     --header-text-color-light: #fff; /* Couleur du texte de l'en-tête en mode light */
 
     /* En-tête en mode dark */
     --header-background-color-dark: #111; /* Couleur de fond de l'en-tête en mode dark */
     --header-text-color-dark: #fff; /* Couleur du texte de l'en-tête en mode dark */
 
-    /* Sticky en mode light */
-    --sticky-background-color-light: #C3C3C3 ; /* Couleur de fond de l'en-tête en mode light */
-    --sticky-text-color-light: #3C3C3C; /* Couleur du texte de l'en-tête en mode light */
 
-    /* Sticky en mode dark */
-    --sticky-background-color-dark: #111; /* Couleur de fond de l'en-tête en mode dark */
-    --sticky-text-color-dark: #fff; /* Couleur du texte de l'en-tête en mode dark */
+    /* Bouton en mode light */
+    --botton-background-color-light: #b4abdb ; 
+    --botton-text-color-light: #3C3C3C; 
+    --botton-hover-color-light: #9f93d0; 
+
+    /* Bouton en mode dark */
+    --botton-background-color-dark: #9f93d0; 
+    --botton-text-color-dark: #fff; 
+    --botton-hover-color-dark: #b4abdb; 
+
+
+    /* bloc en mode light */
+    --bloc-background-color-light: rgb(234, 234, 234);
+    --bloc-title-color-light: #eea03b; 
+    --bloc-text-color-light: #3C3C3C; 
+
+    /* bloc en mode dark */
+    --bloc-background-color-dark: #111; 
+    --bloc-title-color-dark: #fbea7d; 
+    --bloc-text-color-dark: #fff; 
+
+    /* icones en mode light */
+    --icone-color-light: #2C7D2D;
+
+    /* icones en mode dark */
+    --icone-color-dark: #9f93d0;  
 
 }
 
@@ -53,9 +73,13 @@
     --footer-text-color: var(--footer-text-color-light);
     --header-background-color: var(--header-background-color-light);
     --header-text-color: var(--header-text-color-light);
-    --sticky-background-color: var(--sticky-background-color-light);
-    --sticky-text-color: var(--sticky-text-color-light);
-
+    --botton-background-color: var(--botton-background-color-light);
+    --botton-text-color: var(--botton-text-color-light);
+    --botton-hover-color: var(--botton-hover-color-light);
+    --bloc-background-color: var(--bloc-background-color-light);
+    --bloc-title-color: var(--bloc-title-color-light);
+    --bloc-text-color: var(--bloc-text-color-light);
+    --icone-color: var( --icone-color-light);
 }
 
 [data-theme="dark"] {
@@ -67,8 +91,13 @@
     --footer-text-color: var(--footer-text-color-dark);
     --header-background-color: var(--header-background-color-dark);
     --header-text-color: var(--header-text-color-dark);
-    --sticky-background-color: var(--sticky-background-color-dark);
-    --sticky-text-color: var(--sticky-text-color-dark);
+    --botton-background-color: var(--botton-background-color-dark);
+    --botton-text-color: var(--botton-text-color-dark);
+    --botton-hover-color: var(--botton-hover-color-dark);
+    --bloc-background-color: var(--bloc-background-color-dark);
+    --bloc-title-color: var(--bloc-title-color-dark);
+    --bloc-text-color: var(--bloc-text-color-dark);
+    --icone-color: var( --icone-color-dark);
 }
 
 
