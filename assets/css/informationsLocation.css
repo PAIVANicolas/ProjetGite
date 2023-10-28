@@ -11,6 +11,8 @@
     align-items: left;
     flex-wrap: wrap;
     margin: 1%;
+    background-color: var(--bloc-background-color);
+    color: var(--bloc-text-color);
     border: 1px solid #eaeaea;
     border-radius: 10px;
     padding: 2%;
@@ -70,7 +72,7 @@
 }
 
 .reserve-button {
-    background-color: #007bff;
+    background-color: var(--botton-background-color);
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -80,12 +82,18 @@
 }
 
 .reserve-button:hover {
-    background-color: #3295ff;
+    background-color: var(--botton-hover-color);
 }
 
 .reserver {
     color: #000;
     text-decoration: none;
+}
+
+.icone {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+    color: var(--icone-color);
 }
 
 .custom-ul {
@@ -94,12 +102,13 @@
 }
 
 .custom-li {
-    padding-left: 4%;
+    padding: 4%;
 }
 
 .bloc-liste {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .title-font {
@@ -107,7 +116,7 @@
 }
 
 .title-color {
-    color: #D2691E;
+    color: var(--bloc-title-color);
 }
 
 /* Media query pour écrans plus petits (par exemple, max-width: 768px) */
@@ -116,6 +125,14 @@
         padding: 1%;
         flex-wrap: nowrap; /* Empêche le contenu de déborder de la boîte */
         overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+    }
+
+    .section {
+        justify-content: center;
+    }
+
+    .bloc-categorie:not(.first-child) {
+        width: 87vw;
     }
 
     .reserve-button {
