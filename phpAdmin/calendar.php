@@ -20,7 +20,12 @@
     ?>
 
     <script>
-        <?php echo "var eventsData = " . json_encode($events) . ";"; ?>
+        <?php
+        if (isset($events)){
+        echo "var eventsData = " . json_encode($events) . ";";}
+        else{
+            echo "var eventsData = " . json_encode(null) . ";";
+        }?>
     </script>
     <script src="../assets/js/fullCalendar.js"></script>
 

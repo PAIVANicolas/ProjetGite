@@ -24,7 +24,9 @@
 </div>
 
 <script>
-    <?php echo "var eventsData = " . json_encode($events) . ";"; ?>
+    <?php
+        $events = null;
+    echo "var eventsData = " . json_encode($events) . ";"; ?>
 </script>
 
 <form action="./php/reserveraction.php" method="POST" class="reservation-form">
@@ -102,43 +104,6 @@
             }
         });
     });
-
-
-    function sendEmail() {
-        <?php if (isset($isFormValid)): ?>
-        let clientName = document.getElementById('clientName').value;
-
-
-        let clientSurname = document.getElementById('clientSurname').value;
-
-
-        let startDate = document.getElementById('startDate').value;
-
-
-        let endDate = document.getElementById('endDate').value;
-
-
-        let clientEmail = document.getElementById('clientEmail').value;
-
-
-        let clientPhone = document.getElementById('clientPhone').value;
-
-
-        let subject = "Réservation du " + startDate + " au " + endDate;
-
-        let body = "Bonjour,\n\n" +
-            "Je souhaite effectuer une réservation pour les dates du " + startDate + " au " + endDate + ".\n\n" +
-            "Voici mes coordonnées :\n" +
-            "Nom : " + clientName + " Prénom : " + clientSurname + "\n" +
-            "Email : " + clientEmail + "\n" +
-            "Téléphone : " + clientPhone + "\n\n" +
-            "Cordialement,\n" +
-            clientName + " " + clientSurname;
-        window.location.href = "mailto:mkltr@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-
-        <?php endif; ?>
-    }
-
 </script>
 
 </html>
