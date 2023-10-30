@@ -14,13 +14,16 @@ function toggleExpand() {
 
 
 function toggleExpandService() {
-    //conplete
+    const expandButton = document.getElementById("expand-service");
+    const list2 = document.querySelector(".service");
+
+    let isExpanded = list2.classList.contains("expanded");
 
     if (isExpanded) {
-        //conplete
+        list2.classList.remove("expanded");
         expandButton.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'; // Icône "Dérouler"
     } else {
-        //conplete
+        list2.classList.add("expanded");
         expandButton.innerHTML = '<i class="fa-solid fa-chevron-up"></i>'; // Icône "Réduire"
     }
 }
