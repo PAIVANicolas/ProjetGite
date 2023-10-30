@@ -12,7 +12,7 @@
 }
 .img-container img {
   width: 400px;
-  height: auto;
+  height: 400px;
   background-color: #87A0E2;
   border-radius: 16px;
   position: absolute;
