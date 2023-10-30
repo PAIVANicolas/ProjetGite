@@ -18,6 +18,11 @@
     font-size: 2.2rem;
 }
 
+.site-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
 /* Styles pour .sub-header */
 .sub-header {
     position: absolute;
