@@ -37,10 +37,33 @@
                 <li class="custom-li"><i class="fas fa-parking icone"></i> Parking</li>
                 <li class="custom-li"><i class="fas fa-chair icone"></i> Terrasse</li>
                 <li class="custom-li"><i class="fas fa-tv icone"></i> Télévision</li>
-                
+            </ul>
+            <ul class="service">
+                <li class="service-item">Abris pour vélo ou VTT</li>
+                <li class="service-item">Barbecue</li>
+                <li class="service-item">Cuisine équipée</li>
+                <li class="service-item">Habitation indépendante</li>
+                <li class="service-item">Jardin</li>
+                <li class="service-item">Local matériel fermé</li>
+                <li class="service-item">Parking privé</li>
+                <li class="service-item">Salon de jardin</li>
+                <li class="service-item">Terrain non clos</li>
+                <li class="service-item">Terrasse</li>
+                <li class="service-item">Animaux acceptés (Payant)</li>
+                <li class="service-item">Location de linge (Payant)</li>
+                <li class="service-item">Ménage (Payant)</li>
+                <li class="service-item">Climatisation</li>
+                <li class="service-item">Cheminée</li>
+                <li class="service-item">Lave vaisselle</li>
+                <li class="service-item">Sèche cheveux</li>
+                <li class="service-item">Télévision</li>
+                <li class="service-item">Escalade à 5km</li>
+                <li class="service-item">VTT - Vélo</li>
+                <li class="service-item">Musée à 3km</li>
+                <li class="service-item">Randonnée pédestre</li>
             </ul>
 
-            <button class="expand-button-service" onclick="toggleExpandService()"><i class="fa-solid fa-chevron-down"></i></button>
+            <button id="expand-service" class="expand-button" onclick="toggleExpandService()"><i class="fa-solid fa-chevron-down"></i></button>
         </div>
 
         <div class="bloc-categorie">
