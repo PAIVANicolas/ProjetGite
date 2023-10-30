@@ -14,6 +14,25 @@
     width: 100vw;
 }
 
+.logo {
+    position: absolute;
+    left: 3vw;
+}
+
+.site-logo{
+    size: 0.5rem;
+}
+
+.site-name {
+    font-size: 2.2rem;
+}
+
+.site-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .site-name{
     font-size: 2.2rem;
 }
@@ -26,7 +45,7 @@
 /* Styles pour .sub-header */
 .sub-header {
     position: absolute;
-    right: 20px;
+    right: 3vw;
     display: flex;
     align-items: center;
 }
@@ -36,8 +55,12 @@
     color: var(--header-text-color);
     border: none;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1rem;
     margin: 1%;
+}
+
+.mode-toggle {
+    font-size: 2rem;
 }
 
 /* Media query pour écrans plus petits (par exemple, max-width: 768px) */
@@ -49,7 +72,7 @@
 
     .sub-header {
         position: static; /* Rétablit la position normale */
-        margin-top: 20px; /* Ajoute une marge supérieure pour séparer la sous-entête de l'en-tête */
+        margin-top: 2vh; /* Ajoute une marge supérieure pour séparer la sous-entête de l'en-tête */
     }
 
     .select, .mode-toggle {
