@@ -1,6 +1,8 @@
 <header>
     <div class="header">
-        <h1 class="site-name">Figuiès</h1>
+        <a href="./index.php" class="site-link">
+            <h1 class="site-name">Figuiès</h1>
+        </a>
         <!-- Insérez ici votre liste déroulante pour la langue -->
         <div class="sub-header">
             <select class="select">
