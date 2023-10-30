@@ -80,6 +80,7 @@
 </body>
 
 <script src="./assets/js/calendrierVisiteur.js"></script>
+<<<<<<< Updated upstream
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const startDateInput = document.getElementById('startDate');
@@ -105,5 +106,9 @@
         });
     });
 </script>
+=======
+<script src="./assets/js/mode.js"></script>
+<script src="./assets/js/dateInputValidation.js"></script>
+>>>>>>> Stashed changes
 
 </html>
