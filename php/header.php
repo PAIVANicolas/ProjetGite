@@ -6,12 +6,10 @@
         <a href="./index.php" class="site-link">
             <h1 class="site-name">Figuiès</h1>
         </a>
-        <!-- Insérez ici votre liste déroulante pour la langue -->
         <div class="sub-header">
             <select class="select">
                 <option value="fr">Fr</option>
                 <option value="en">En</option>
-                <!-- Ajoutez d'autres langues au besoin -->
             </select>
             <div class="mode-toggle">
                 <input type="checkbox" class="sr-only" id="darkmode-toggle">

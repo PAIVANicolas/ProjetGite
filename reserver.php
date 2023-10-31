@@ -64,8 +64,6 @@
     <div class="button-group">
         <button type="submit" name="submitForm"  class="submit" onclick="sendEmail()">Soumettre la Réservation</button>
         <button type="cancel" name="cancelForm" class="cancel" formnovalidate>Annuler</button>
-
-
     </div>
 
     <div class="messageErreur">
@@ -74,15 +72,11 @@
         }?>
     </div>
 
-
 </form>
-
 </body>
 
 <script src="./assets/js/calendrierVisiteur.js"></script>
 <script src="./assets/js/mode.js"></script>
 <script src="./assets/js/dateInputValidation.js"></script>
-
-
 
 </html>

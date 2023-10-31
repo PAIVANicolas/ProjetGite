@@ -26,7 +26,7 @@
 
 <?php include_once("./php/informationsLocation.php"); ?>
 
-<div class="container-map">
+<div class="container-map" >
     <div id="map" style="display:none;"></div>
     <button id="loadMapButton">Afficher la Carte</button>
 </div>
@@ -43,11 +43,23 @@
 
 <script>
     document.getElementById('loadMapButton').addEventListener('click', function() {
+        var mapContainer = document.getElementById('map');
+        var button = document.getElementById('loadMapButton');
+
         if (!window.mapLoaded) {
             loadLeafletScript();
             window.mapLoaded = true;
+            button.textContent = 'Masquer la Carte';
+            mapContainer.style.display = 'block';
+        } else {
+            if (mapContainer.style.display === 'none') {
+                mapContainer.style.display = 'block';
+                button.textContent = 'Masquer la Carte';
+            } else {
+                mapContainer.style.display = 'none';
+                button.textContent = 'Afficher la Carte';
+            }
         }
-        document.getElementById('map').style.display = 'block';
     });
 
     function loadLeafletScript() {

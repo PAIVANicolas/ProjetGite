@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-setInterval(refreshTable, 5000);
+setInterval(refreshTable, 15000);
