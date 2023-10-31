@@ -1,7 +1,6 @@
 /* Importez les variables CSS de rules.css */
 @import url("rules.css");
 
-/* Styles pour l'en-tête (header) */
 .header {
     background-color: var(--header-background-color);
     color: var(--header-text-color);
@@ -42,7 +41,6 @@
     color: inherit; 
 }
 
-/* Styles pour .sub-header */
 .sub-header {
     position: absolute;
     right: 3vw;
@@ -63,20 +61,28 @@
     font-size: 2rem;
 }
 
-/* Media query pour écrans plus petits (par exemple, max-width: 768px) */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* Change la direction pour empiler les éléments verticalement */
-        text-align: center; /* Centre le texte */
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .logo {
+        position: static; 
+        margin-top: 2vh; 
+    }
+
+    .site-name {
+        font-size: 2.2rem; 
     }
 
     .sub-header {
-        position: static; /* Rétablit la position normale */
-        margin-top: 2vh; /* Ajoute une marge supérieure pour séparer la sous-entête de l'en-tête */
+        position: static; 
+        margin-top: 2vh; 
     }
 
     .select, .mode-toggle {
-        margin: 1% 0; /* Ajoute une marge supérieure et inférieure pour séparer les éléments dans la sous-entête */
+        margin: 1% 0; 
     }
 }
 

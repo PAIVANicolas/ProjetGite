@@ -51,16 +51,9 @@
     }
     .img-container img.carrousel-img.active {
         display: block;
-        width: 300px;
-        height: auto;
+        width: 260px;
+        height: 260px;
     }
-}
-
-
-
-
-
-@media (max-width: 768px) {
     .arrows svg {
         width: 40px; /* Ajuste la taille des flèches sur les smartphones */
         height: 40px;

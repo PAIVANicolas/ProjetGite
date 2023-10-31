@@ -150,6 +150,10 @@
         width: 87vw;
     }
 
+    .bloc-liste {
+        flex-wrap: wrap;
+    }
+
     .reserve-button {
         margin-top: 15px;
     }
