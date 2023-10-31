@@ -9,19 +9,9 @@ document.getElementById('imageForm').addEventListener('submit', function(e) {
     })
         .then(response => response.text())
         .then(data => {
-            console.log(data);
+
         })
         .catch(error => {
             console.error('Error:', error);
         });
 });
-
-
-function previewImage(event) {
-    var imagePreview = document.getElementById('imagePreview');
-    imagePreview.src = URL.createObjectURL(event.target.files[0]);
-    imagePreview.onload = function() {
-        URL.revokeObjectURL(imagePreview.src)
-    }
-    imagePreview.style.display = 'block';
-}

@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 require('../assets/bdd/config.php');
 
@@ -22,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     // Définir le chemin de destination
     $fileName = time() . '_' . preg_replace('/[^a-zA-Z0-9\._]/', '', basename($_FILES['image']['name']));
 
-    $destPath = CHEMIN_IMAGES::CHEMIN_IMAGES_COURROUSEL . '/' . $fileName;
+    $destPath = CHEMIN_IMAGES::CHEMIN_IMAGES_CARROUSEL . '/' . $fileName;
 
     // Déplacer l'image vers le dossier de destination
     if(move_uploaded_file($fileTmpPath, $destPath)) {

@@ -18,8 +18,8 @@
                 <input type="text" id="imageAlt" name="image_alt" required>
             </div>
             <button type="submit">Ajouter l'image</button>
+        </div>
     </form>
-    <img id="imagePreview"></div>
 </div>
 
 <script src="../assets/js/ajouterImage.js"></script>
