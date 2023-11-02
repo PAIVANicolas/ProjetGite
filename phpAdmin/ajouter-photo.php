@@ -14,7 +14,7 @@
                 <div class="label-container">
                     <label for="image">Image :</label>
                 </div>
-                <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage(event)" class="input-image">
+                <input type="file" id="image" name="image" accept="image/*" class="input-image">
             </div>
             <div class="form-group">
                 <div class="label-container">
