@@ -20,7 +20,7 @@
 }
 
 .card.fullscreen {
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     position: relative;
     z-index: 999;
@@ -28,15 +28,15 @@
 
 .card-title {
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 2rem;
 }
 
 .card-button {
-    margin-top: 2vh;
+    margin-top: 4vh;
     background-color: #3498db;
     color: #fff;
     border: none;
-    border-radius: 1vw;
+    border-radius: 1vh;
     padding: 2vh 5vw;
     font-size: 2vh;
     cursor: pointer;
@@ -54,7 +54,7 @@
     background-color: #ff5733;
     color: #fff;
     border: none;
-    border-radius: 1vw;
+    border-radius: 1vh;
     padding: 2vh 5vw;
     font-size: 2vh;
     cursor: pointer;
@@ -83,7 +83,7 @@
     }
 
     .card-title {
-        font-size: 3vw;
+        font-size: 1.5rem;
     }
 
     .reset-button {
