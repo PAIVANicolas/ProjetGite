@@ -1,6 +1,6 @@
 <header>
     <div class="header">
-        <a href="./index.php" class="logo">
+        <a href="/ProjetGite/index.php" class="logo">
             <img src="/ProjetGite/assets/images/LOGO-final-fond-transparent.png" alt="Logo du site" class="site-logo">
         </a>
         <a href="./index.php" class="site-link">

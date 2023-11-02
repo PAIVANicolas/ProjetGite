@@ -10,7 +10,7 @@
             </div>
             <div class="form-group">
                 <label for="image">Image :</label>
-                <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage(event)">
+                <input type="file" id="image" name="image" accept="image/*" required">
             </div>
 
             <div class="form-group">

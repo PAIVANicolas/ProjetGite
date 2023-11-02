@@ -10,11 +10,13 @@
         <div class="card-content-inserer-image" hidden="hidden">
             <?php include ("../phpAdmin/ajouter-photo.php");?>
         </div>
-
         <button class="card-button" onclick="expandCard(2)">Ouvrir</button>
     </div>
     <div class="card">
         <div class="card-title">Gérer les images</div>
+        <div class="card-content-modifier-image" hidden="hidden">
+            <?php include ("../phpAdmin/afficher-images.php");?>
+        </div>
         <button class="card-button" onclick="expandCard(3)">Ouvrir</button>
     </div>
 </div>
