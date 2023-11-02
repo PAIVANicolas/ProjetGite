@@ -1,67 +1,84 @@
 .bloc-ajout-photo {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
+    max-width: 60vw;
+    margin: 5vh auto;
+    padding: 2vh;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 1vh;
     background-color: #f9f9f9;
 }
 
-#imageForm {
-    max-width: 100%;
-    margin: auto;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
 }
 
-
-.form-group label {
+.label-container label {
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 1vh;
+    font-size: 1.7rem;
 }
 
-.form-group select,
-.form-group input,
-.form-group button {
-    padding: 10px;
-    border-radius: 4px;
+.select-section,
+.input-image,
+.input-description {
+    padding: 2vh;
+    border-radius: 1vh;
     border: 1px solid #ccc;
+    text-align: center;
 }
 
-.form-group button {
+.submit-button {
+    padding: 2vh 4vh;
+    border-radius: 1vh;
     background-color: #008CBA;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-.form-group button:hover {
+.submit-button:hover {
     background-color: #005f5f;
 }
 
 @media (max-width: 768px) {
+    .bloc-ajout-photo {
+        max-width: 80vw;
+    }
+
     .form-group {
-        margin-bottom: 10px;
+        margin-bottom: 1vh;
     }
 
-    .form-img {
-        padding: 10px;
+    .select-section,
+    .input-image,
+    .input-description {
+        padding: 1.5vh;
+        font-size: 1.4rem;
     }
 
-    #imagePreview {
-        width: 100%;
-        height: auto;
+    .submit-button {
+        padding: 1.5vh 3vh;
     }
 }
 
 @media (max-width: 480px) {
+    .bloc-ajout-photo {
+        max-width: 90vw;
+    }
+
     .form-group {
-        margin-bottom: 5px;
+        margin-bottom: 1vh;
     }
 
-    .form-img {
-        padding: 5px;
+    .select-section,
+    .input-image,
+    .input-description {
+        padding: 1vh;
+        font-size: 1.2rem;
     }
 
-    #imagePreview {
-        margin-top: 10px;
+    .submit-button {
+        padding: 1vh 2vh;
     }
 }
