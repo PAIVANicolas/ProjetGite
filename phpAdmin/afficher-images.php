@@ -14,6 +14,10 @@ include ('../phpAdmin/cheminsImages.php');
             <button type="submit">Voir les images</button>
         </div>
     </form>
+
+    <div class="images-container">
+
+    </div>
 </div>
 
 <script>
@@ -42,17 +46,29 @@ include ('../phpAdmin/cheminsImages.php');
     });
 
     function afficherImages(images) {
-        let container = document.createElement('div');
+        let container = document.querySelector('.images-container');
+        container.innerHTML = ''; // Efface les anciennes images
+
         images.forEach(image => {
-            console.log(image);
             let img = document.createElement('img');
             img.src = image.path;
             img.alt = image.alt;
             container.appendChild(img);
         });
-        container.style.border = '1px solid red';
-        document.body.appendChild(container);
-
-        document.body.appendChild(container);
     }
 </script>
+<style>
+    .images-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajustez la taille minimum ici */
+        grid-gap: 10px; /* Espace entre les images */
+        padding: 10px;
+    }
+
+    .images-container img {
+        width: 400px; /* Largeur fixe */
+        height: 400px; /* Hauteur fixe */
+        object-fit: cover; /* Assure que les images couvrent toute la zone sans déformer */
+        border-radius: 5px; /* Arrondir les coins si désiré */
+    }
+</style>

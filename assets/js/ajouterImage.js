@@ -9,9 +9,9 @@ document.getElementById('imageForm').addEventListener('submit', function(e) {
     })
         .then(response => response.text())
         .then(data => {
-
+            this.reset();
         })
         .catch(error => {
-            console.error('Error:', error);
+           window.alert("Erreur lors de l'import de l'image");
         });
 });
