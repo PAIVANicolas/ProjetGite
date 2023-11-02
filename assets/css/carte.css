@@ -1,43 +1,70 @@
 .card-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .card {
-    width: 30vw;
+    width: 50vw;
+    height: 10vw;
     border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
+    margin: 2vh;
+    padding: 2vh;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.2);
     transition: all 0.6s;
 }
 
 .card.fullscreen {
     width: 100vw;
     height: 100vh;
-    position: flex;
+    position: relative;
     z-index: 999;
 }
 
 .card-title {
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 3vw;
 }
 
 .card-button {
-    margin-top: 1%;
-    top: 0;
+    margin-top: 2vh;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 1vw;
+    padding: 2vh 5vw;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color: #1c6ab8;
 }
 
 .reset-button {
     align-self: center;
     width: 30vw;
-    margin-top: 1%;
+    margin-top: 2vh;
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    border-radius: 1vw;
+    padding: 2vh 5vw;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Média query pour les écrans plus petits */
+.reset-button:hover {
+    background-color: #e6491d;
+}
+
 @media (max-width: 768px) {
     .card-container {
         display: flex;
@@ -47,18 +74,20 @@
 
     .card {
         width: 80vw;
+        height: 20vw;
     }
+
     .card.fullscreen {
         width: 80vw;
         height: 80vh;
     }
 
     .card-title {
-        font-size: 1.5;
+        font-size: 3vw;
     }
 
     .reset-button {
         width: 45vw;
+        margin-top: 2vh;
     }
 }
-
