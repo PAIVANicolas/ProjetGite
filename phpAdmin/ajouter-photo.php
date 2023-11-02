@@ -16,7 +16,6 @@
                 </div>
                 <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage(event)" class="input-image">
             </div>
-
             <div class="form-group">
                 <div class="label-container">
                     <label for="imageAlt">Description de l'image :</label>
