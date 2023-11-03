@@ -20,7 +20,7 @@
         <button class="card-button" onclick="expandCard(3)">Ouvrir</button>
     </div>
     <div class="card">
-        <div class="card-title">Gérer les images</div>
+        <div class="card-title">Gérer les informations contact</div>
         <div class="card-content-contact-image" hidden="hidden">
             <?php include ("../phpAdmin/afficher-contact.php");?>
         </div>
