@@ -1,6 +1,8 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
+header('Content-Type: application/json');
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -12,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $xml = new SimpleXMLElement('<contacts></contacts>');
     }
 
-    echo $email." ".$phone;
     if (!empty($email)) {
         $xml->email = $email;
     }
