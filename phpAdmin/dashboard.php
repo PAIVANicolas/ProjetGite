@@ -25,5 +25,7 @@
 
     <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/footer.php"); ?>
     <script src="/ProjetGite/assets/js/carte.js"></script>
+
+
 </body>
 </html>

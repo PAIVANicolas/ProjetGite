@@ -24,6 +24,8 @@
         <div class="card-content-contact-image" hidden="hidden">
             <?php include ("../phpAdmin/afficher-contact.php");?>
         </div>
-        <button class="card-button" onclick="expandCard(4)">Ouvrir</button>
+        <button class="card-button" onclick="expandCard(4); mettreContactAJour();" >Ouvrir</button>
     </div>
 </div>
+
+<script src="/ProjetGite/assets/js/informationsContact.js"></script>

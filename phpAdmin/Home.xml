@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Index>
+        <Presentation></Presentation>
+        <tarifs>
+                <SemaineMoyenneSaison>550€</SemaineMoyenneSaison>
+                <NuiteeMoyenneSaison>85€</NuiteeMoyenneSaison>
+                <SemaineHauteSaison>650€</SemaineHauteSaison>
+                <NuiteeHauteSaison>110€</NuiteeHauteSaison>
+        </tarifs>
+</Index>
