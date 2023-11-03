@@ -1,0 +1,101 @@
+Mise en place de la GreenIt
+
+
+1 : Mettre un expiration sur les ressources
+
+(dans le fichier httpd.conf)
+LoadModule expires_module modules/mod_expires.so
+LoadModule filter_module modules/mod_filter.so
+
+<IfModule mod_expires.c>
+   ExpiresActive On
+   ExpiresByType image/jpg "access plus 1 year"
+   ExpiresByType image/jpeg "access plus 1 year"
+   ExpiresByType image/gif "access plus 1 year"
+   ExpiresByType image/png "access plus 1 year"
+   ExpiresByType text/css "access plus 1 month"
+   ExpiresByType image/gif "access plus 1 year"
+   ExpiresByType image/webp "access plus 1 year"
+   ExpiresByType application/pdf "access plus 1 month"
+   ExpiresByType text/x-javascript "access plus 1 month"
+   ExpiresByType application/x-shockwave-flash "access plus 1 month"
+   ExpiresDefault "access plus 2 days"
+</IfModule>
+
+<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|svg)$">
+    ExpiresDefault "access plus 1 year"
+</filesMatch>
+
+2 : Compression des images, recoupage en ammont des images
+
+(dans le fichier httpd.conf)
+
+<IfModule mod_deflate.c>
+    # Compression pour divers types de fichiers
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/vnd.microsoft.icon
+
+    # Éviter de compresser les images et autres contenus non compressibles
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+
+    # S'assurer que les proxies ne délivrent pas le contenu compressé de manière incorrecte
+    Header append Vary User-Agent env=!dont-vary
+</IfModule>
+
+
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/plain text/html text/xml text/css text/javascript application/javascript
+</IfModule>
+
+
+3 : passage des ressources de http1 à 2
+(dans le fichier httpd.conf)
+
+Protocols h2 h2c http/1.1
+
+(dans le fichier vhost)
+
+<VirtualHost 127.0.0.40:80>
+    # Enable HTTP/2 on this Vhost
+    Protocols h2 h2c http/1.1
+    # Rest of the configuration ...
+    DocumentRoot "C:/xampp/htdocs/ProjetGite"
+    ServerName myproject
+    SSLEngine on
+    SSLCertificateFile "conf/ssl.crt/server.crt"
+    SSLCertificateKeyFile "conf/ssl.key/server.key"
+    <Directory "C:/xampp/htdocs/ProjetGite">
+        Options All
+    	AllowOverride All
+    	Require all granted
+    </Directory>
+</VirtualHost>
+
+
+4 : réduire la taille de la page
+
+Nous avons resizer les images et réduit leur qualité gain de 600 ko
+
+5 : réduire le nombre de requetes http
+
+Mise à disposition d'un bouton pour afficher la carte si l'utilisateur souhaite la voir ( on impose plus d'avoir la carte sur le site)
+
+
+SCENARIOS : 
+
+1.55 g eco2  72.99 eco index et 43 requêtes (scénario page index -> regarder caroussel, regarder tarifs, présentation + carte) (sans dézoom de la carte qui fait baisser l'éco index)
+
+1.46g  77.03 eco index 13 requetes  (scénario réservation ( regarder calendrier et remplir le formulaire de la réservation))
+
+au total 3,01g  et 56 requetes
+
+

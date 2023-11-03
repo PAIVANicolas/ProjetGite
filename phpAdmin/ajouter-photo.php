@@ -17,14 +17,37 @@
                 <input type="file" id="image" name="image" accept="image/*" class="input-image">
             </div>
             <div class="form-group">
+                <p id="resizeLink" style="display:none;">
+                    Votre image est trop grande, merci de la redimensionner en 400 px par 400px
+                    <a href="https://www.iloveimg.com/fr/redimensionner-image" target="_blank">lien pour redimensionner l'image</a>.
+                </p>
                 <div class="label-container">
                     <label for="imageAlt">Description de l'image :</label>
                 </div>
                 <input type="text" id="imageAlt" name="image_alt" required class="input-description">
             </div>
             <button type="submit" class="submit-button">Ajouter l'image</button>
+
         </div>
     </form>
 </div>
 
 <script src="../assets/js/ajouterImage.js"></script>
+
+<script>
+    document.getElementById('image').addEventListener('change', function(event) {
+
+        var file = event.target.files[0];
+        if (file) {
+            var img = new Image();
+            img.onload = function() {
+                if (img.width > 400 || img.height > 400) {
+                    document.getElementById('resizeLink').style.display = 'block';
+                } else {
+                    document.getElementById('resizeLink').style.display = 'none';
+                }
+            };
+            img.src = URL.createObjectURL(file);
+        }
+    });
+</script>
