@@ -1,4 +1,4 @@
-<button id="reset-button" style="display: none" class="reset-button" id="reset-button" onclick="resetCards()">Annuler</button>
+<button id="reset-button" style="display: none" class="reset-button" id="reset-button" onclick="resetCards()">Fermer</button>
 
 <div class="card-container">
     <div class="card">
