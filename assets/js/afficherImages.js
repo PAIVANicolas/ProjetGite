@@ -35,9 +35,9 @@ function afficherImages(images) {
         img.alt = image.alt;
 
         let deleteButton = document.createElement('button');
-        deleteButton.classList.add('delete-button');  // Ajoute une classe pour le style
+        deleteButton.classList.add('delete-button');
         deleteButton.innerText = 'Supprimer';
-        deleteButton.dataset.imageId = image.id;  // Supposant que chaque image a un ID unique
+        deleteButton.dataset.imageId = image.id;
 
         deleteButton.addEventListener('click', function() {
             var confirmDeletion = confirm('Êtes-vous sûr de vouloir supprimer cette image ?');

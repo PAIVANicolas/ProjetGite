@@ -17,7 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['section'])) {
         while ($row = $result->fetch_assoc()) {
             $images[] = [
                 'path' => $row['image_path'],
-                'alt' => $row['image_alt']
+                'alt' => $row['image_alt'],
+                'id' =>$row['Id_Image']
+
             ];
         }
         $response['status'] = 'success';
