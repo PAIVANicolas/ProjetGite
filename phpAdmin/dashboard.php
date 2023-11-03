@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/css/toggle.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/afficherImages.css">
     <title>Tableau de bord</title>
 </head>
 
