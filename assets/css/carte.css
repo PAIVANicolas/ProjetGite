@@ -23,6 +23,7 @@
     width: 95vw;
     height: 100vh;
     position: relative;
+    overflow: scroll;
     z-index: 999;
 }
 
@@ -32,13 +33,12 @@
 }
 
 .card-button {
-    margin-top: 4vh;
     background-color: #3498db;
     color: #fff;
     border: none;
     border-radius: 1vh;
-    padding: 2vh 5vw;
-    font-size: 2vh;
+    padding: 1vh 2vw;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -82,8 +82,15 @@
         height: 80vh;
     }
 
+    .card-button {
+        .card-button {
+            padding: 1vh 2vw; 
+            font-size: 1.2rem; 
+        }
+    }
+
     .card-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .reset-button {

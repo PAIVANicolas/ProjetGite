@@ -4,7 +4,6 @@
     grid-gap: 2vw;
     padding: 2vh;
     max-height: 80vh;
-    overflow: auto;
 }
 
 .images-container img {
@@ -12,7 +11,7 @@
     height: 30vw;
     object-fit: cover;
     border-radius: 5px;
-    margin: 2vw;
+    margin: 1vh 2vw;
     background-color: #f0f0f0;
 }
 
@@ -22,5 +21,31 @@
     border: none;
     padding: 2vh 4vw;
     cursor: pointer;
+    margin: 2vh 2vw;
     border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+    .images-container {
+        display: block;
+        max-height: 80vh;
+    }
+
+    .images-container img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1vw;
+    }
+
+    .delete-button {
+        width: 100%;
+        padding: 1vh 2vw;
+    }
+}
+
+
+
+
+
+
+
