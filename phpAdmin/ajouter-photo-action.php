@@ -2,9 +2,9 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require('../assets/bdd/config.php');
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
-include ('../phpAdmin/cheminsImages.php');
+include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/cheminsImages.php");
 
 $response = ['status' => 'error', 'message' => 'Une erreur s\'est produite.'];
 

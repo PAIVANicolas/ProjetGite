@@ -1,5 +1,5 @@
 <?php
-require('../assets/bdd/config.php');
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
 $requetecalendrier = "SELECT * FROM reservations where status !='rejetée'";
 $requetetableau = "SELECT * FROM reservations where status !='confirmée'";

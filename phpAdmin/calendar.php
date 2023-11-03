@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include_once("../phpAdmin/connectionCheck.php"); ?>
-    <link rel="icon" href="../favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/rules.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/nav.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/header.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/css/calendar.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/css/footer.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/css/toggle.css"/>
+    <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/connectionCheck.php"); ?>
+    <link rel="icon" href="/ProjetGite/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/rules.css">
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/calendar.css"/>
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/toggle.css"/>
     <title>Calendrier</title>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 
+    <?php require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");?>
 
-    <?php
-        require('../assets/bdd/config.php');
-    ?>
 
     <script>
         <?php
@@ -27,12 +25,12 @@
             echo "var eventsData = " . json_encode(null) . ";";
         }?>
     </script>
-    <script src="../assets/js/fullCalendar.js"></script>
+    <script src="/ProjetGite/assets/js/fullCalendar.js"></script>
 
 </head>
 <body>
-<?php include_once("../php/header.php"); ?>
-<?php include_once("../phpAdmin/navAdmin.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/header.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/navAdmin.php"); ?>
 <div class="content-wrapper">
     <div id='calendar'></div>
     <div class="tableau-reservations">
@@ -48,12 +46,12 @@
             </tr>
             </thead>
             <tbody>
-            <?php include_once ("../phpAdmin/afficher_demandes_reservation.php");?>
+            <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher_demandes_reservation.php");?>
             </tbody>
         </table>
     </div>
 </div>
-<script src="../assets/js/calendrierReservations.js"></script>
-<?php include_once("../php/footer.php"); ?>
+<script src="/ProjetGite/assets/js/calendrierReservations.js"></script>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/footer.php"); ?>
 </body>
 </html>

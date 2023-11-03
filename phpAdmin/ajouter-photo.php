@@ -7,7 +7,7 @@
                     <label for="section">Section :</label>
                 </div>
                 <select id="section" name="section" class="select-section">
-                    <?php include_once('../phpAdmin/afficher-sections-image.php');?>
+                    <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher-sections-image.php");?>
                 </select>
             </div>
             <div class="form-group">
@@ -32,7 +32,7 @@
     </form>
 </div>
 
-<script src="../assets/js/ajouterImage.js"></script>
+<script src="/ProjetGite/assets/js/ajouterImage.js"></script>
 
-<script src="../assets/js/controleTailleImage.js"></script>
+<script src="/ProjetGite/assets/js/controleTailleImage.js"></script>
 

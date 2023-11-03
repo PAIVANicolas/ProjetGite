@@ -1,6 +1,6 @@
 <?php
-require('../assets/bdd/config.php');
-include ('../phpAdmin/cheminsImages.php');
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/cheminsImages.php");
 
 $response = ['status' => 'error', 'message' => ''];
 

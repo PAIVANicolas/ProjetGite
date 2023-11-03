@@ -1,6 +1,5 @@
 <?php
-require('../assets/bdd/config.php');
-
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
 if (isset($_POST['id'], $_POST['status'], $_POST['start_time'], $_POST['end_time'])) {
 

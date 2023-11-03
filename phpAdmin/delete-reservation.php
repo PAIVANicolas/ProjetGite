@@ -1,5 +1,5 @@
 <?php
-require('../assets/bdd/config.php');
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
 if (isset($_POST['id'])) {
     $id = $_POST['id'];

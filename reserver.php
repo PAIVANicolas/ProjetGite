@@ -8,19 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/rules.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/header.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/reserverform.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/toggle.css"/>
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/rules.css">
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/reserverform.css">
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/toggle.css"/>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 </head>
 <body>
-<?php include_once("./php/header.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/header.php"); ?>
 
 <div id="calendar">
-    <script src="./assets/js/fullCalendarUser.js"></script>
+    <script src="/ProjetGite/assets/js/fullCalendarUser.js"></script>
 </div>
 
 <script>
@@ -29,7 +29,7 @@
     echo "var eventsData = " . json_encode($events) . ";"; ?>
 </script>
 
-<form action="./php/reserveraction.php" method="POST" class="reservation-form">
+<form action="/ProjetGite/php/reserveraction.php" method="POST" class="reservation-form">
 
     <div class="form-group">
         <label for="clientName" class="form-label">Nom:</label>
@@ -75,8 +75,8 @@
 </form>
 </body>
 
-<script src="./assets/js/calendrierVisiteur.js"></script>
-<script src="./assets/js/mode.js"></script>
-<script src="./assets/js/dateInputValidation.js"></script>
+<script src="/ProjetGite/assets/js/calendrierVisiteur.js"></script>
+<script src="/ProjetGite/assets/js/mode.js"></script>
+<script src="/ProjetGite/assets/js/dateInputValidation.js"></script>
 
 </html>

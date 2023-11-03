@@ -1,6 +1,6 @@
 <?php
 // Répertoire contenant les images
-$imageDirectory = './assets/images/carousel/'; // Assurez-vous que le chemin est correct
+$imageDirectory = '/ProjetGite/assets/images/carousel/'; // Assurez-vous que le chemin est correct
 
 // Liste des noms de fichiers d'images dans le répertoire
 $imageNames = [];

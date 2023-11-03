@@ -1,5 +1,5 @@
 <?php
-require('../assets/bdd/config.php');
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
 $sql = "SHOW COLUMNS FROM Image WHERE Field='section'";
 $result = $conn->query($sql);

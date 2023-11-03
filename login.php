@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/loginform.css">
+    <link rel="stylesheet" href="/ProjetGite/assets/css/loginform.css">
 </head>
 <body>
 <form id="loginForm" class="box" method="post" name="login">
@@ -21,7 +21,7 @@
     document.getElementById("loginForm").addEventListener("submit", function(e) {
         e.preventDefault();
         let formData = new FormData(this);
-        fetch('./phpAdmin/loginaction.php', {
+        fetch('/ProjetGite/phpAdmin/loginaction.php', {
             method: 'POST',
             body: formData
         })
@@ -35,7 +35,7 @@
             })
             .then(text => {
                 if (text.includes('dashboard.php')) {
-                    window.location.href = './phpAdmin/dashboard.php';
+                    window.location.href = '/ProjetGite/phpAdmin/dashboard.php';
                 } else {
                     const errorMsg = document.querySelector('.errorMessage');
                     errorMsg.textContent = "Le mot de passe ou le nom d'utilisateur est incorrect.";

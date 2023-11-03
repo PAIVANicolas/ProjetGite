@@ -1,5 +1,6 @@
 <?php
-require('../assets/bdd/config.php');
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
+
 session_start();
 if (isset($_POST['username'], $_POST['password'])) {
     $username = $_POST['username'];

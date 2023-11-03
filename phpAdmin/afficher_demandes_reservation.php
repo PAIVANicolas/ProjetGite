@@ -1,5 +1,6 @@
 <?php
-require('../assets/bdd/config.php');
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
+
 
 $requetetableau = "SELECT * FROM reservations where status !='confirmée'";
 $resulttableau = $conn->query($requetetableau);

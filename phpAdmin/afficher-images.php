@@ -1,6 +1,6 @@
 <?php
-require('../assets/bdd/config.php');
-include ('../phpAdmin/cheminsImages.php');
+require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/cheminsImages.php");
 ?>
 <div>
     <form id="imageVisionForm">
@@ -8,7 +8,7 @@ include ('../phpAdmin/cheminsImages.php');
             <div class="form-group-vision">
                 <label for="section">Section :</label>
                 <select id="section" name="section">
-                    <?php include ('../phpAdmin/afficher-sections-image.php');?>
+                    <?php include ('/ProjetGite/phpAdmin/afficher-sections-image.php');?>
                 </select>
             </div>
             <button type="submit">Voir les images</button>
@@ -19,5 +19,4 @@ include ('../phpAdmin/cheminsImages.php');
 
     </div>
 </div>
-
-<script src="../assets/js/afficherImages.js"></script>
+<script src="/ProjetGite/assets/js/afficherImages.js"></script>
