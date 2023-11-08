@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $xml->facebook = $facebook;
     }
 
-    $xml->asXML('../contact.xml');
+    $xml->asXML('contact.xml');
 
 
     $contact = json_decode(json_encode((array) $xml), 1);
