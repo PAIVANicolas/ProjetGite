@@ -6,7 +6,7 @@
         <button class="card-button" onclick="expandCard(1)">Ouvrir</button>
     </div>
     <div class="card">
-        <div class="card-title">Inserter des images</div>
+        <div class="card-title">Insérer des images</div>
         <div class="card-content-inserer-image" hidden="hidden">
             <?php include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/ajouter-photo.php");?>
         </div>
