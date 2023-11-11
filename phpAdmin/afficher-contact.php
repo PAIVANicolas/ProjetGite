@@ -7,4 +7,3 @@
         <input type="url" name="facebook" id="facebook" placeholder="URL de votre profil Facebook" class="input-texte"><br>
     <input type="submit" value="Mettre à jour" >
 </form>
-

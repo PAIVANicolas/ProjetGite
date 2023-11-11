@@ -3,7 +3,8 @@ require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
 header('Content-Type: application/json');
 
-$filePath = '/ProjetGite/assets/xml/contact.xml';
+$filePath = $_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/xml/contact.xml";
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
