@@ -2,8 +2,8 @@
 async function refreshTable() {
     try {
 
-        let responseCalendar = await fetch('./php/afficher-reservations-visiteur.php');
-
+        let responseCalendar = await fetch('php/afficher-reservations-visiteur.php');
+        console.log(responseCalendar);
         if(responseCalendar){
 
             let eventsData = await responseCalendar.json();

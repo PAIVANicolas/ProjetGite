@@ -9,7 +9,7 @@
     var facebookInput = document.getElementById('facebook');
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/ProjetGite/phpAdmin/afficher-contact-action.php', true);
+    xhr.open('POST', '/ProjetGite/phpAdmin/action/afficher-contact-action.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
     xhr.onreadystatechange = function() {
