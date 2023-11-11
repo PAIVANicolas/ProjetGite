@@ -47,7 +47,7 @@ legend {
     color: #333;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     #updateForm {
         padding: 5vw;
     }
