@@ -63,7 +63,7 @@
 
     <div class="button-group">
         <button type="submit" name="submitForm"  class="submit">Soumettre la Réservation</button>
-        <button type="cancel" name="cancelForm" class="cancel" formnovalidate>Annuler</button>
+        <button type="reset" name="cancelForm" class="cancel" >Annuler</button>
     </div>
 
     <div class="messageErreur">
