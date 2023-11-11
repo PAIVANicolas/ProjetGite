@@ -25,8 +25,20 @@
 
 #logoutButton {
     margin-left: auto;
-    margin-top: 10px;
+    margin-top: 2vh;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+#logoutButton:hover {
+    background-color: #c82333;
+}
+
 
 
 .nav-menu ul li a {
