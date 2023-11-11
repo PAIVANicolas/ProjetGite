@@ -2,7 +2,7 @@
 
 <div class="card-container">
     <div class="card">
-        <div class="card-title">Modification de page</div>
+        <div class="card-title">Modification de la page d'accueil</div>
         <div class="card-content-inserer-image" hidden="hidden">
             <?php include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher-infos-presentation.php");?>
         </div>
