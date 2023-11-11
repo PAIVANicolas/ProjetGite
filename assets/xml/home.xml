@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Index>
-        <apartirde>550 € / semaine</apartirde>
+<informations>
+        <presentation>Nouveau texte de présentation</presentation>
         <tarifs>
-                <SemaineMoyenneSaison>550€</SemaineMoyenneSaison>
-                <NuiteeMoyenneSaison>85€</NuiteeMoyenneSaison>
-                <SemaineHauteSaison>650€</SemaineHauteSaison>
-                <NuiteeHauteSaison>110€</NuiteeHauteSaison>
+                <semaineMoyenneSaison>550€</semaineMoyenneSaison>
+                <nuiteeMoyenneSaison>85€</nuiteeMoyenneSaison>
+                <semaineHauteSaison>650€</semaineHauteSaison>
+                <nuiteeHauteSaison>110€</nuiteeHauteSaison>
         </tarifs>
-        <dispo>
-                <datedebut>11/04/2023</datedebut>
-                <datefin>04/04/2024</datefin>
-        </dispo>
-</Index>
+        <datesOuverture>
+                <dateDebut>2023-04-01</dateDebut>
+                <dateFin>2023-10-30</dateFin>
+        </datesOuverture>
+</informations>
