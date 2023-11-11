@@ -4,7 +4,7 @@ document.getElementById('imageVisionForm').addEventListener('submit', function(e
     var formData = new FormData();
     formData.append('section', section);
 
-    fetch('../phpAdmin/afficher-images-action.php', {
+    fetch('../phpAdmin/action/afficher-images-action.php', {
         method: 'POST',
         body: formData
     })
