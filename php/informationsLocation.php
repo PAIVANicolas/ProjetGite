@@ -15,7 +15,7 @@
             Pour des vacances authentiques et au grand air, dans un <strong>lieu paisible à l'écart de la circulation</strong>, vous vous sentirez chez vous tout en étant dépaysé.
         </div>
         </p>
-        <button class="reserve-button"><a class="reserver" href="./reserver.php">Réserver</a></button>
+        <button class="reserve-button"><a class="reserver" href="/ProjetGite/php/reserver.php">Réserver</a></button>
         <button class="expand-button" onclick="toggleExpand()"><i class="fa-solid fa-chevron-down"></i></button>
     </div>
 

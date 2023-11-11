@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
@@ -6,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez notre Gîte, une maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse qui vous séduira par sa vue magnifique et son environnement agréable.">
     <meta name="keywords" content="Gîte gite gîte conques concques Conques Concques Marcillac Marcilac marcillac marcilac maison en pierre  ">
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/rules.css">
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/informationsLocation.css">
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/nav.css">
