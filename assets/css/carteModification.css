@@ -1,0 +1,65 @@
+@import url("rules.css");
+
+#updateForm {
+    background-color: #fff;
+    padding: 2vh 2vw;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 0px #00000033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh 2vw;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 2vh 0;
+}
+
+.title-form {
+    font-size: 1.2rem;
+    margin-bottom: 1vh;
+}
+
+.input-texte,
+input[type="date"] {
+    margin-bottom: 2vh;
+    padding: 2vh;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+fieldset {
+    margin-right: 2vw;
+    padding: 2vh 2vw;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+@media screen and (max-width: 600px) {
+    #updateForm {
+        padding: 5vw;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    fieldset {
+        margin-right: 0;
+        margin-bottom: 2vh;
+    }
+}
