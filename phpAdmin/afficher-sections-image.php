@@ -1,7 +1,7 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
-$sql = "SHOW COLUMNS FROM Image WHERE Field='section'";
+$sql = "SHOW COLUMNS FROM image WHERE Field='section'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
