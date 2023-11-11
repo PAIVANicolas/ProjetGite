@@ -4,7 +4,7 @@
 .img-container {
   width: 100vw;
   height: 85vh;
-  background-image: url('../images/carrousel_backgroud.jpg');
+  background-image: url('/ProjetGite/assets/images/carrousel_backgroud.jpg');
   background-size: cover; /* L'image de fond couvre l'élément tout en conservant ses proportions */
   background-repeat: no-repeat;
   background-position: center;
