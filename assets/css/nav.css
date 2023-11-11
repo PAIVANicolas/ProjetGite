@@ -20,7 +20,9 @@
 }
 
 .nav-menu ul li:last-child {
-    margin-right: 0;
+    margin-right: 10px;
+    float: right;
+
 }
 
 .nav-menu ul li a {
@@ -36,3 +38,4 @@
     background-color: #555;
     border-radius: 5px;
 }
+
