@@ -3,13 +3,15 @@ require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 
 header('Content-Type: application/json');
 
+$filePath = '/ProjetGite/assets/xml/contact.xml';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $facebook = $_POST['facebook'];
 
-    if (file_exists('contact.xml')) {
-        $xml = simplexml_load_file('contact.xml');
+    if (file_exists($filePath)) {
+        $xml = simplexml_load_file($filePath);
     } else {
         $xml = new SimpleXMLElement('<contacts></contacts>');
     }
