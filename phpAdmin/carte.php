@@ -3,7 +3,11 @@
 <div class="card-container">
     <div class="card">
         <div class="card-title">Modification de page</div>
-        <button class="card-button" onclick="expandCard(1)">Ouvrir</button>
+        <div class="card-content-inserer-image" hidden="hidden">
+            <?php include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher-infos-presentation.php");?>
+        </div>
+        <button class="card-button" onclick="expandCard(1);mettreInfosAJour()">Ouvrir</button>
+
     </div>
     <div class="card">
         <div class="card-title">Insérer des images</div>
@@ -29,3 +33,4 @@
 </div>
 
 <script src="/ProjetGite/assets/js/informationsContact.js"></script>
+<script src="/ProjetGite/assets/js/informationsPresentation.js"></script>
