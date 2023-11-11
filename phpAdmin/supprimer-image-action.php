@@ -1,7 +1,5 @@
 <?php
 require('../assets/bdd/config.php');
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
 if (isset($_POST['image_id'])) {
     $image_id = $_POST['image_id'];
