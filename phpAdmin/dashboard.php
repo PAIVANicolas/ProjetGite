@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/toggle.css"/>
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/afficherImages.css"/>
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/afficherContact.css"/>
     <title>Tableau de bord</title>
 </head>
 
