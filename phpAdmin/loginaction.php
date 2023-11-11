@@ -7,7 +7,7 @@ if (isset($_POST['username'], $_POST['password'])) {
     $hashedPassword = hash('sha256', $_POST['password']);
 
 
-    $stmt = $conn->prepare("SELECT * FROM `Utilisateur` WHERE identifiant = ? AND password = ?");
+    $stmt = $conn->prepare("SELECT * FROM `utilisateur` WHERE identifiant = ? AND password = ?");
     $stmt->bind_param("ss", $username, $hashedPassword);
     $stmt->execute();
     $result = $stmt->get_result();

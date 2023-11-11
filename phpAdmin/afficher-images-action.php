@@ -7,7 +7,7 @@ $response = ['status' => 'error', 'message' => ''];
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['section'])) {
     $section = $_POST['section'];
 
-    $stmt = $conn->prepare("SELECT * FROM Image WHERE section = ?");
+    $stmt = $conn->prepare("SELECT * FROM image WHERE section = ?");
     $stmt->bind_param('s', $section);
     $stmt->execute();
     $result = $stmt->get_result();

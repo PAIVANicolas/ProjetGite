@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     // Déplacer l'image vers le dossier de destination
     if(move_uploaded_file($fileTmpPath, $destPath)) {
         // Si l'image est déplacée avec succès, ajoutez son chemin à la base de données
-        $stmt = $conn->prepare("INSERT INTO Image (image_path, image_alt, is_featured, section) VALUES (?, ?, 'no', ?)");
+        $stmt = $conn->prepare("INSERT INTO image (image_path, image_alt, is_featured, section) VALUES (?, ?, 'no', ?)");
         $stmt->bind_param('sss', $destPath, $_POST['image_alt'], $_POST['section']);
 
         if($stmt->execute()) {

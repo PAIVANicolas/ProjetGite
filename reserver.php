@@ -62,7 +62,7 @@
     </div>
 
     <div class="button-group">
-        <button type="submit" name="submitForm"  class="submit" onclick="sendEmail()">Soumettre la Réservation</button>
+        <button type="submit" name="submitForm"  class="submit">Soumettre la Réservation</button>
         <button type="cancel" name="cancelForm" class="cancel" formnovalidate>Annuler</button>
     </div>
 
