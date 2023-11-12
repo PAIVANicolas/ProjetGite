@@ -6,7 +6,7 @@
         <div class="card-content-inserer-image" hidden="hidden">
             <?php include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher-infos-presentation.php");?>
         </div>
-        <button class="card-button" onclick="expandCard(1);mettreInfosAJour()">Ouvrir</button>
+        <button class="card-button" onclick="expandCard(1);mettreinfos()">Ouvrir</button>
 
     </div>
     <div class="card">

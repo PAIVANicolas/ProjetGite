@@ -7,16 +7,16 @@
             <legend><strong>Tarifs:</strong></legend>
 
             <label class="title-form">Semaine Moyenne Saison:</label>
-            <input type="text" name="tarif_semaine_moyenne" id="tarif_semaine_moyenne" class="input-texte" placeholder="Ex: 550€"><br>
+            <input type="text" name="tarif_semaine_moyenne" id="tarif_semaine_moyenne" class="input-texte" placeholder="€"><br>
 
             <label class="title-form">Nuitée Moyenne Saison:</label>
-            <input type="text" name="tarif_nuitee_moyenne" id="tarif_nuitee_moyenne" class="input-texte" placeholder="Ex: 85€"><br>
+            <input type="text" name="tarif_nuitee_moyenne" id="tarif_nuitee_moyenne" class="input-texte" placeholder="€"><br>
 
             <label class="title-form">Semaine Haute Saison:</label>
-            <input type="text" name="tarif_semaine_haute" id="tarif_semaine_haute" class="input-texte" placeholder="Ex: 650€"><br>
+            <input type="text" name="tarif_semaine_haute" id="tarif_semaine_haute" class="input-texte" placeholder="€"><br>
 
             <label class="title-form">Nuitée Haute Saison:</label>
-            <input type="text" name="tarif_nuitee_haute" id="tarif_nuitee_haute" class="input-texte" placeholder="Ex: 110€"><br>
+            <input type="text" name="tarif_nuitee_haute" id="tarif_nuitee_haute" class="input-texte" placeholder="€"><br>
         </fieldset>
 
         <fieldset>
