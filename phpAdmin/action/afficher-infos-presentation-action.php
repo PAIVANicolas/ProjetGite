@@ -6,41 +6,19 @@ header('Content-Type: application/json');
 $filePath = $_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/xml/home.xml";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $presentation = $_POST['presentation'];
-    $tarifSemaineMoyenne = $_POST['tarif_semaine_moyenne'];
-    $tarifNuiteeMoyenne = $_POST['tarif_nuitee_moyenne'];
-    $tarifSemaineHaute = $_POST['tarif_semaine_haute'];
-    $tarifNuiteeHaute = $_POST['tarif_nuitee_haute'];
-    $dateDebut = $_POST['date_debut'];
-    $dateFin = $_POST['date_fin'];
-
     if (file_exists($filePath)) {
         $xml = simplexml_load_file($filePath);
     } else {
         $xml = new SimpleXMLElement('<informations></informations>');
     }
 
-    if (!empty($presentation)) {
-        $xml->presentation = $presentation;
-    }
-    if (!empty($tarifSemaineMoyenne)) {
-        $xml->tarifs->semaineMoyenneSaison = $tarifSemaineMoyenne;
-    }
-    if (!empty($tarifNuiteeMoyenne)) {
-        $xml->tarifs->nuiteeMoyenneSaison = $tarifNuiteeMoyenne;
-    }
-    if (!empty($tarifSemaineHaute)) {
-        $xml->tarifs->semaineHauteSaison = $tarifSemaineHaute;
-    }
-    if (!empty($tarifNuiteeHaute)) {
-        $xml->tarifs->nuiteeHauteSaison = $tarifNuiteeHaute;
-    }
-    if (!empty($dateDebut)) {
-        $xml->datesOuverture->dateDebut = $dateDebut;
-    }
-    if (!empty($dateFin)) {
-        $xml->datesOuverture->dateFin = $dateFin;
-    }
+    $xml->presentation = isset($_POST['presentation']) ? $_POST['presentation'] : '';
+    $xml->tarifs->semaineMoyenneSaison = isset($_POST['tarif_semaine_moyenne']) ? $_POST['tarif_semaine_moyenne'] : '';
+    $xml->tarifs->nuiteeMoyenneSaison = isset($_POST['tarif_nuitee_moyenne']) ? $_POST['tarif_nuitee_moyenne'] : '';
+    $xml->tarifs->semaineHauteSaison = isset($_POST['tarif_semaine_haute']) ? $_POST['tarif_semaine_haute'] : '';
+    $xml->tarifs->nuiteeHauteSaison = isset($_POST['tarif_nuitee_haute']) ? $_POST['tarif_nuitee_haute'] : '';
+    $xml->datesOuverture->dateDebut = isset($_POST['date_debut']) ? $_POST['date_debut'] : '';
+    $xml->datesOuverture->dateFin = isset($_POST['date_fin']) ? $_POST['date_fin'] : '';
 
     $xml->asXML($filePath);
 

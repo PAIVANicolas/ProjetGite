@@ -39,3 +39,33 @@ function mettreInfosAJour() {
         '&dateDebut=' + encodeURIComponent(dateDebutInput.value) +
         '&dateFin=' + encodeURIComponent(dateFinInput.value));
 }
+
+function mettreinfos(){
+    var presentationInput = document.getElementById('presentation');
+    var tarifSemaineMoyenneInput = document.getElementById('tarif_semaine_moyenne');
+    var tarifNuiteeMoyenneInput = document.getElementById('tarif_nuitee_moyenne');
+    var tarifSemaineHauteInput = document.getElementById('tarif_semaine_haute');
+    var tarifNuiteeHauteInput = document.getElementById('tarif_nuitee_haute');
+    var dateDebutInput = document.getElementById('date_debut');
+    var dateFinInput = document.getElementById('date_fin');
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/ProjetGite/phpAdmin/action/afficher-infos-presentation-action.php', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    console.log(xhr.responseText);
+    xhr.onreadystatechange = function() {
+
+        if (xhr.readyState == 4 && xhr.status == 200) {
+
+            var infos = JSON.parse(xhr.responseText);
+            presentationInput.value = infos.presentation || 'Pas de texte de présentation';
+            tarifSemaineMoyenneInput.value = infos.tarifSemaineMoyenne || 'Pas de tarif';
+            tarifNuiteeMoyenneInput.value = infos.tarifNuiteeMoyenne || 'Pas de tarif';
+            tarifSemaineHauteInput.value = infos.tarifSemaineHaute || 'Pas de tarif';
+            tarifNuiteeHauteInput.value = infos.tarifNuiteeHaute || 'Pas de tarif';
+            dateDebutInput.value = infos.dateDebut || 'Pas de date de début';
+            dateFinInput.value = infos.dateFin || 'Pas de date de fin';
+
+        }
+    };
+}
