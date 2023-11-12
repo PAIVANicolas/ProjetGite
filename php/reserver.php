@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="/ProjetGite/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/rules.css">
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/nav.css">
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/header.css"/>
@@ -63,7 +63,7 @@
 
     <div class="button-group">
         <button type="submit" name="submitForm"  class="submit">Soumettre la Réservation</button>
-        <button type="reset" name="cancelForm" class="cancel" >Annuler</button>
+        <button type="button" name="cancelForm" class="cancel" onclick="location.href='../index.php';" >Annuler</button>
     </div>
 
     <div class="messageErreur">
