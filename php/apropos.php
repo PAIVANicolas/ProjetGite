@@ -93,24 +93,6 @@
 
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/footer.php"); ?>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetchAboutContent();
-    });
-
-    function fetchAboutContent() {
-
-        fetch('/ProjetGite/php/apropos-handler.php')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data.content);
-                document.getElementById('about-content').innerHTML = data.content;
-
-
-            })
-            .catch(error => console.error('Erreur:', error));
-    }
-</script>
 <script src="/ProjetGite/assets/js/mode.js"></script>
 </body>
 </html>
