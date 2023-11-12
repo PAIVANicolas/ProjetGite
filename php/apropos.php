@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/toggle.css"/>
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/apropos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Nous contacter</title>
 </head>
@@ -53,11 +54,38 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/header.php"); ?>
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/nav.php");?>
 
-<div class="container">
+<div class="container-apropos">
     <div id="about-content">
 
     </div>
+
+    <section id="our-history" class="about-section">
+        <h2>Notre Histoire</h2>
+        <p>Texte décrivant l'histoire de votre gîte...</p>
+    </section>
+
+    <section id="our-team" class="about-section">
+        <h2>Notre Équipe</h2>
+        <p>Description de l'équipe, avec photos et biographies si disponibles...</p>
+    </section>
+
+    <section id="our-values" class="about-section">
+        <h2>Nos Valeurs</h2>
+        <p>Une liste de vos valeurs et principes fondamentaux...</p>
+    </section>
 </div>
+
+<form class="form-contact">
+    <label class="form-element">Quel est votre nom ?
+        <input type="text">
+    </label>
+    <label class="form-element" >Quel est votre adresse email ?
+        <input type="email">
+    </label>
+    <label>
+        <input type="text">Votre demande :
+    </label>
+</form>
 
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/footer.php"); ?>
 
@@ -72,6 +100,8 @@
             .then(response => response.json())
             .then(data => {
                 document.getElementById('about-content').innerHTML = data.content;
+
+                console.log(data.content);
             })
             .catch(error => console.error('Erreur:', error));
     }
