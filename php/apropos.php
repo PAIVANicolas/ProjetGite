@@ -76,15 +76,19 @@
 </div>
 
 <form class="form-contact">
-    <label class="form-element">Quel est votre nom ?
+    <label class="form-element">
+        Quel est votre nom ?
         <input type="text">
     </label>
-    <label class="form-element" >Quel est votre adresse email ?
+    <label class="form-element" >
+        Quel est votre adresse email ?
         <input type="email">
     </label>
-    <label>
-        <input type="text">Votre demande :
+    <label class="form-element">
+        Votre demande :
+        <input type="text">
     </label>
+    <button onclick="envoyerMail()" value="Submit" class="form-element btn-center" >Envoyer mail</button>
 </form>
 
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/includes/footer.php"); ?>
@@ -99,9 +103,10 @@
         fetch('/ProjetGite/php/apropos-handler.php')
             .then(response => response.json())
             .then(data => {
+                console.log(data.content);
                 document.getElementById('about-content').innerHTML = data.content;
 
-                console.log(data.content);
+
             })
             .catch(error => console.error('Erreur:', error));
     }
