@@ -20,13 +20,17 @@ function envoyerMail() {
             // Encodage du corps de l'email
             var body = encodeURIComponent("Demande: " + demande);
 
-            // Construction du lien mailto
+            // Construction du mailto
             var mailtoLink = "mailto:" + emailDestinataire + "?subject=" + subject + "&body=" + body;
-            console.log(mailtoLink);
-            // Ouverture de la fenêtre de messagerie
-            window.location.href = mailtoLink;
+
+            var mailtoAnchor = document.createElement('a');
+            mailtoAnchor.href = mailtoLink;
+
+            mailtoAnchor.click();
         }
     };
 
     xhr.send();
+
+    return false;
 }

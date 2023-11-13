@@ -35,18 +35,19 @@
             <p>Une liste de vos valeurs et principes fondamentaux...</p>
         </div>
     </div>
-    <form id="formContact" class="form-contact">
+    <form id="formContact" class="form-contact" onsubmit="return envoyerMail()">
         <label class="form-element">Quel est votre nom ?</label>
-        <input type="text" id="nomMail" name="nomMail">
+        <input type="text" id="nomMail" name="nomMail" required>
 
         <label class="form-element">Sujet de votre demande ?</label>
-        <input type="text" id="sujetMail" name="sujetMail">
+        <input type="text" id="sujetMail" name="sujetMail" required>
 
         <label class="form-element">Votre demande :</label>
-        <textarea id="demandeMail" name="demandeMail"></textarea>
+        <textarea id="demandeMail" name="demandeMail" required></textarea>
 
-        <button class="btn-center" type="button" onclick="envoyerMail()">Envoyer mail</button>
+        <button class="btn-center" type="submit">Envoyer par mail</button>
     </form>
+
 
 
 </section>
