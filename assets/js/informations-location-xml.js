@@ -26,9 +26,21 @@ function mettreInfosPresentationAJour(){
             tarifNuiteeMoyenneInput.textContent  = infos.tarifs && infos.tarifs.nuiteeMoyenneSaison || 'Pas de tarif';
             tarifSemaineHauteInput.textContent  = infos.tarifs && infos.tarifs.semaineHauteSaison || 'Pas de tarif';
             tarifNuiteeHauteInput.textContent  = infos.tarifs && infos.tarifs.nuiteeHauteSaison || 'Pas de tarif';
-            dateDebutInput.textContent  = infos.datesOuverture && infos.datesOuverture.dateDebut || 'Pas de date de début';
-            dateFinInput.textContent  = infos.datesOuverture && infos.datesOuverture.dateFin || 'Pas de date de fin';
+            if (infos.datesOuverture && infos.datesOuverture.dateDebut && infos.datesOuverture.dateFin) {
+                var dateDebutFormatee = convertirDateFormat(infos.datesOuverture.dateDebut);
+                var dateFinFormatee = convertirDateFormat(infos.datesOuverture.dateFin);
+                dateDebutInput.textContent = dateDebutFormatee;
+                dateFinInput.textContent = dateFinFormatee;
+            } else {
+                dateDebutInput.textContent = 'Pas de date de début';
+                dateFinInput.textContent = 'Pas de date de fin';
+            }
         }
     };
     xhr.send();
+}
+
+function convertirDateFormat(dateString) {
+    var dateParts = dateString.split('-'); // divise la date en [yyyy, mm, dd]
+    return dateParts[2] + '/' + dateParts[1] + '/' + dateParts[0]; // recombine dans le format dd/mm/yyyy
 }
