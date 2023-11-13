@@ -1,5 +1,7 @@
 <?php
-class CHEMIN_IMAGES {
+
+class CHEMIN_IMAGES
+{
     const CHEMIN_IMAGES_CARROUSEL = '../assets/images/carrousel';
     const CHEMIN_IMAGES_ACCUEIL = '../assets/images/accueil';
 
@@ -7,4 +9,5 @@ class CHEMIN_IMAGES {
 
     const ACCUEIL = 'Accueil';
 }
+
 ?>

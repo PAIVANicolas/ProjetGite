@@ -9,7 +9,7 @@ $events = array();
 
 
 if ($resultcalendrier->num_rows > 0) {
-    while($row = $resultcalendrier->fetch_assoc()) {
+    while ($row = $resultcalendrier->fetch_assoc()) {
         $end_date = new DateTime($row["end_date"]);
 
         $events[] = array(
@@ -22,7 +22,7 @@ if ($resultcalendrier->num_rows > 0) {
     }
     $resultcalendrier->data_seek(0);
     echo json_encode($events);
-}else {
+} else {
     $events[] = array();
     echo json_encode($events);
 }

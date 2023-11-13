@@ -8,7 +8,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/cheminsImages.php");
             <div class="form-group-vision">
                 <label for="section">Section :</label>
                 <select id="section" name="section">
-                    <?php include ('/ProjetGite/phpAdmin/afficher-sections-image.php');?>
+                    <?php include('/ProjetGite/phpAdmin/afficher-sections-image.php'); ?>
                 </select>
             </div>
             <button type="submit">Voir les images</button>

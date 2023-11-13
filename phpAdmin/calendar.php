@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/connectionCheck.php"); ?>
-    <link rel="icon" href="/ProjetGite/favicon.ico" />
+    <link rel="icon" href="/ProjetGite/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/rules.css">
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/nav.css">
     <link rel="stylesheet" type="text/css" href="/ProjetGite/assets/css/header.css"/>
@@ -14,14 +14,14 @@
     <title>Calendrier</title>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 
-    <?php require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");?>
+    <?php require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php"); ?>
 
 
     <script>
         <?php
-        if (isset($events)){
-        echo "var eventsData = " . json_encode($events) . ";";}
-        else{
+        if (isset($events)) {
+            echo "var eventsData = " . json_encode($events) . ";";
+        } else {
             echo "var eventsData = " . json_encode(null) . ";";
         }?>
     </script>
@@ -46,7 +46,7 @@
             </tr>
             </thead>
             <tbody>
-            <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher_demandes_reservation.php");?>
+            <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher_demandes_reservation.php"); ?>
             </tbody>
         </table>
     </div>

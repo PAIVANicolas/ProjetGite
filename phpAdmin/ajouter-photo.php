@@ -7,7 +7,7 @@
                     <label for="section">Section :</label>
                 </div>
                 <select id="section" name="section" class="select-section">
-                    <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/action/afficher-sections-image.php");?>
+                    <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/action/afficher-sections-image.php"); ?>
                 </select>
             </div>
             <div class="form-group">
@@ -19,7 +19,8 @@
             <div class="form-group">
                 <p id="resizeLink" style="display:none;">
                     Votre image est trop grande, merci de la redimensionner en 400 px par 400px
-                    <a href="https://www.iloveimg.com/fr/redimensionner-image" target="_blank">lien pour redimensionner l'image</a>.
+                    <a href="https://www.iloveimg.com/fr/redimensionner-image" target="_blank">lien pour redimensionner
+                        l'image</a>.
                 </p>
                 <div class="label-container">
                     <label for="imageAlt">Description de l'image :</label>

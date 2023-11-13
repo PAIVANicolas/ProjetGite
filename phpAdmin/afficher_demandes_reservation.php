@@ -5,11 +5,11 @@ require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
 $requetetableau = "SELECT * FROM reservations where status !='confirmée'";
 $resulttableau = $conn->query($requetetableau);
 if ($resulttableau->num_rows > 0) {
-    while($row = $resulttableau->fetch_assoc()) {
+    while ($row = $resulttableau->fetch_assoc()) {
         $start_date = date("Y-m-d", strtotime($row["start_date"]));
         $end_date = date("Y-m-d", strtotime($row["end_date"]));
         echo "<tr>";
-        echo "<td>" .  $start_date . "</td>";
+        echo "<td>" . $start_date . "</td>";
         echo "<td>" . $end_date . "</td>";
         echo "<td>" . $row["client_name"] . "</td>";
         echo "<td>" . $row["client_surname"] . "</td>";
