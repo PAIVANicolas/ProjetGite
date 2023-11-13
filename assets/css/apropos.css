@@ -1,60 +1,74 @@
 @import url("rules.css");
-.container-apropos{
+
+.container-apropos {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--bloc-background-color);
     color: var(--bloc-text-color);
-    border: 1px solid #eaeaea;
     text-align: center;
+    padding: 2vh 2vw;
 }
 
-.about-section{
-    margin-top: 10vh;
+#about-content{
+    margin-bottom: 7vh;
+    margin-top: 3vh;
+}
+
+.about-section {
+    margin: 2vh 0;
+}
+
+h2{
+    font-size: 1.5rem;
 }
 
 .form-contact {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 60vw;
+    margin: 2vh 2vw;
+    padding: 1vh 2vw;
     background-color: var(--bloc-background-color);
     color: var(--bloc-text-color);
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    justify-content: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .form-element {
-    display: block;
-    margin-bottom: 20px;
-    text-align: center;
-
-
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0;
 }
 
-.form-element label {
-    display: block;
-    margin-bottom: 5px;
+label {
+    margin: 1vh 0;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
-
-.form-element input {
-    width: 100%;
-    padding: 8px;
+input, textarea {
+    width: 60%;
+    padding: 1vh 1vw;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
+textarea{
+    width: 50vw;
+    height: 10vh;
+}
+
 .btn-center {
-    display: block;
-    margin: 0 auto;
     background-color: var(--botton-background-color);
     border: none;
+    align-items: center;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 1vh 2vw;
+    font-size: 1.2rem;
     cursor: pointer;
-    margin: 0 auto;
+    margin: 2vh auto;
 }
