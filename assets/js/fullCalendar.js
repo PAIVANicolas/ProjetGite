@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         eventClick: function(info) {
             var confirmDelete = confirm("Voulez-vous supprimer cette réservation ?");
             if (confirmDelete) {
-                deleteEvent(info.event.id);
+                deleteEvent(info.event.id,true);
             }
         },
         locale: 'fr',

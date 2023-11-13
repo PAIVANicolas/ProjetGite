@@ -10,18 +10,41 @@ function validerReservation(id) {
 }
 
 
-function deleteEvent(eventId) {
+function deleteEvent(eventId,boolean) {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "delete-reservation.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            refreshTable();
-            calendar.refetchEvents();
+    if(boolean==true){
+        xhr.open("POST", "delete-reservation.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                refreshTable();
+                calendar.refetchEvents();
+            }
         }
+
+        xhr.send("id=" + eventId);
+    }else{
+
+        xhr.open("POST", "delete-reservation-definitive.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        console.log(xhr.responseText);
+        xhr.onreadystatechange = function() {
+
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                refreshTable();
+                calendar.refetchEvents();
+            }
+        }
+
+        var confirmation = window.confirm("Voulez-vous vraiment supprimer cette réservation ?");
+        if(confirmation){
+            xhr.send("id=" + eventId);
+        }else{
+            window.alert("Suppression annulée.")
+        }
+
     }
 
-    xhr.send("id=" + eventId);
 }
 
 

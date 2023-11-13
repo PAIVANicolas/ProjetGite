@@ -1,9 +1,13 @@
 <?php
+global $conn;
 require($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/bdd/config.php");
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+echo "cc";
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
-    $sql = "UPDATE reservations SET status='rejetée' WHERE id=?";
+    $sql = "DELETE from reservations WHERE id=?";
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);

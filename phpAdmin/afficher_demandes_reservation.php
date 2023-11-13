@@ -16,7 +16,7 @@ if ($resulttableau->num_rows > 0) {
         echo "<td>" . $row["status"] . "</td>";
         echo "<td>";
         echo "<button onclick='validerReservation(" . $row["id"] . ")'>Valider</button>";
-        echo "<button onclick='deleteEvent(" . $row["id"] . ")'>Supprimer</button>";
+        echo "<button onclick='deleteEvent(" . $row["id"] . ", false)'>Supprimer</button>";
         echo "</td>";
         echo "</tr>";
     }
