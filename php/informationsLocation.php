@@ -1,7 +1,7 @@
 <div class="bloc-general">
 
     <div class="bloc-categorie first-child">
-        <h2 class="title-font title-color">À partir de 550€ / semaine</h2>
+        <h2 class="title-font title-color" id="apartirde">À partir de 550€ / semaine</h2>
 
         <div class="paragraph">
             Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.<br><br>

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function mettreInfosPresentationAJour(){
 
-
+    var apartirde = document.getElementById('apartirde');
     var tarifSemaineMoyenneInput = document.getElementById('tarif_semaine_moyenne');
     var tarifNuiteeMoyenneInput = document.getElementById('tarif_nuitee_moyenne');
     var tarifSemaineHauteInput = document.getElementById('tarif_semaine_haute');
@@ -21,7 +21,7 @@ function mettreInfosPresentationAJour(){
         if (xhr.readyState == 4 && xhr.status == 200) {
 
             var infos = JSON.parse(xhr.responseText);
-
+            apartirde.textContent = infos.presentation || 'Prix moyen à la semaine non défini';
             tarifSemaineMoyenneInput.textContent  = infos.tarifs && infos.tarifs.semaineMoyenneSaison || 'Pas de tarif';
             tarifNuiteeMoyenneInput.textContent  = infos.tarifs && infos.tarifs.nuiteeMoyenneSaison || 'Pas de tarif';
             tarifSemaineHauteInput.textContent  = infos.tarifs && infos.tarifs.semaineHauteSaison || 'Pas de tarif';

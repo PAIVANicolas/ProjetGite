@@ -24,10 +24,6 @@
         xhr.send('emaill=' + emailInput.value + '&phonee=' + phoneInput.value + '&facebookk=' + facebookInput.value);
     }
 
-
-
-
-
 function afficherContact(){
     var emailInput = document.getElementById('emaill');
     var phoneInput = document.getElementById('phonee');
