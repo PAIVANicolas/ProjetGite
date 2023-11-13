@@ -1,16 +1,17 @@
  document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
+     mettreContactAJour();
 });
 
     function mettreContactAJour(){
-    var emailInput = document.getElementById('email');
-    var phoneInput = document.getElementById('phone');
-    var facebookInput = document.getElementById('facebook');
+    var emailInput = document.getElementById('emaill');
+    var phoneInput = document.getElementById('phonee');
+    var facebookInput = document.getElementById('facebookk');
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/ProjetGite/phpAdmin/action/afficher-contact-action.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
+    console.log(xhr.responseText);
     xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
     var contact = JSON.parse(xhr.responseText);
@@ -20,14 +21,14 @@
 }
 };
 
-    xhr.send('email=' + emailInput.value + '&phone=' + phoneInput.value + '&facebook=' + facebookInput.value);
+    xhr.send('emaill=' + emailInput.value + '&phonee=' + phoneInput.value + '&facebookk=' + facebookInput.value);
 
 }
 
 function afficherContact(){
-    var emailInput = document.getElementById('email');
-    var phoneInput = document.getElementById('phone');
-    var facebookInput = document.getElementById('facebook');
+    var emailInput = document.getElementById('emaill');
+    var phoneInput = document.getElementById('phonee');
+    var facebookInput = document.getElementById('facebookk');
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '/ProjetGite/phpAdmin/action/afficher-contact-action.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

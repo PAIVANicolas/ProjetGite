@@ -7,9 +7,9 @@ $filePath = $_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/assets/xml/contact.xml";
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $facebook = $_POST['facebook'];
+    $email = $_POST['emaill'];
+    $phone = $_POST['phonee'];
+    $facebook = $_POST['facebookk'];
 
     if (file_exists($filePath)) {
         $xml = simplexml_load_file($filePath);
