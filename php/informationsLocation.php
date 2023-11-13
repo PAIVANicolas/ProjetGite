@@ -69,13 +69,12 @@
         <div class="bloc-categorie">
             <h2 class="title-font title-color">TARIFS</h2>
             <ul class="bloc-liste custom-ul">
-                <li class="custom-li"><i class="fas fa-calendar-alt icone"></i> Semaine Moyenne saison : 550€</li>
-                <li class="custom-li"><i class="fas fa-moon icone"></i> Nuitée Moyenne saison : 85€</li>
-                <li class="custom-li"><i class="fas fa-sun icone"></i> Semaine Haute Saison : 650€</li>
-                <li class="custom-li"><i class="fas fa-star icone"></i> Nuitée Haute Saison : 110€</li>
+                <li class="custom-li"><i class="fas fa-calendar-alt icone"></i> Semaine Moyenne saison : <a id="tarif_semaine_moyenne"></a></li>
+                <li class="custom-li"><i class="fas fa-moon icone"></i> Nuitée Moyenne saison : <a id="tarif_nuitee_moyenne"></a></li>
+                <li class="custom-li"><i class="fas fa-sun icone"></i> Semaine Haute Saison : <a id="tarif_semaine_haute"></a></li>
+                <li class="custom-li"><i class="fas fa-star icone"></i> Nuitée Haute Saison :<a id="tarif_nuitee_haute"></a></li>
             </ul>
         </div>
-
         <div class="bloc-categorie">
             <h2 class="title-font title-color">MOYENS DE PAIEMENT</h2>
             <ul class="bloc-liste custom-ul">
@@ -87,13 +86,13 @@
 
         <div class="bloc-categorie">
             <h2 class="title-font title-color icone">DISPONIBILITÉS</h2>
-            <p><i class="fas fa-calendar-alt icone"></i> Ouverture à partir du <strong>01/04/2023</strong> jusqu'au <strong>30/10/2023</strong></p>
+            <p><i class="fas fa-calendar-alt icone"></i> Ouverture à partir du <strong id="date_debut"></strong> jusqu'au <strong id="date_fin"></strong></p>
         </div>
 
     </section>
 
 </div>
 
-<script>
+<script src="/ProjetGite/assets/js/informations-location-xml.js">
 
 </script>

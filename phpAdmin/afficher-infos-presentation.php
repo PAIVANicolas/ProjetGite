@@ -23,7 +23,7 @@
             <legend><strong>Dates d'Ouverture:</strong></legend>
 
             <label class="title-form">Date de Début:</label>
-            <input type="date" name="date_debut" id="date_debut"><br>
+            <input type="date" name="date_debut" id="date_debut" ><br>
 
             <label class="title-form">Date de Fin:</label>
             <input type="date" name="date_fin" id="date_fin"><br>
