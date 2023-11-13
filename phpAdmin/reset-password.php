@@ -9,18 +9,19 @@
 <body>
 <form id="loginForm" class="box" method="post" name="login">
     <div class="cadreLogin">
-        <h2 class="title">Se connecter</h2>
-        <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
-        <input type="password" class="box-input" name="password" placeholder="Mot de passe">
-        <input type="submit" value="Connexion " name="submit" class="box-button">
+        <h2 class="title">Modifier le mot de passe utilisateur</h2>
+        <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" required="true">
+        <input type="password" class="box-input" name="passwordActuel" placeholder="Mot de passe actuel" >
+        <input type="password" class="box-input" name="passwordNouveau" placeholder="Nouveau mot de passe" >
+        <input type="submit" value="Valider" name="submit" class="box-button">
         <button type="button" name="cancel" id="cancelButton">Vision des utilisateurs</button>
-        <input type="submit" value="Modifier mot de passe " id="ModifPasswd" class="box-button">
+
     </div>
     <?php if (!empty($message)) { ?>
         <p class="errorMessage"><?php echo $message; ?></p>
     <?php } ?>
 </form>
 
-<script src="/ProjetGite/assets/js/login.js"></script>
+<script src="/ProjetGite/assets/js/reset-password.js"></script>
 </body>
 </html>

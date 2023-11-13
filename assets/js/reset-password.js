@@ -1,7 +1,11 @@
+document.getElementById("cancelButton").addEventListener("click", function() {
+    window.location.href = '/ProjetGite/index.php';
+});
+
 document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault();
     let formData = new FormData(this);
-    fetch('/ProjetGite/phpAdmin/loginaction.php', {
+    fetch('/ProjetGite/phpAdmin/action/reset-password-action.php', {
         method: 'POST',
         body: formData
     })
@@ -25,12 +29,4 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
         .catch(error => {
             window.alert(error);
         });
-});
-
-document.getElementById("cancelButton").addEventListener("click", function() {
-    window.location.href = '/ProjetGite/index.php';
-});
-
-document.getElementById("ModifPasswd").addEventListener("click", function() {
-    window.location.href = '/ProjetGite/phpAdmin/reset-password.php';
 });

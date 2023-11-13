@@ -57,6 +57,7 @@ body {
 #cancelButton {
     padding: 2vh 4vw;
     margin-top: 1vh;
+    margin-bottom: 1vh;
     background-color: #dc3545;
     color: #fff;
     border: none;
