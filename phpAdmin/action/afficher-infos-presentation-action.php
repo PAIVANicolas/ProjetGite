@@ -12,18 +12,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $xml = new SimpleXMLElement('<informations></informations>');
     }
 
-    $xml->presentation = isset($_POST['presentation']) ? $_POST['presentation'] : '';
-    $xml->tarifs->semaineMoyenneSaison = isset($_POST['tarif_semaine_moyenne']) ? $_POST['tarif_semaine_moyenne'] : '';
-    $xml->tarifs->nuiteeMoyenneSaison = isset($_POST['tarif_nuitee_moyenne']) ? $_POST['tarif_nuitee_moyenne'] : '';
-    $xml->tarifs->semaineHauteSaison = isset($_POST['tarif_semaine_haute']) ? $_POST['tarif_semaine_haute'] : '';
-    $xml->tarifs->nuiteeHauteSaison = isset($_POST['tarif_nuitee_haute']) ? $_POST['tarif_nuitee_haute'] : '';
-    $xml->datesOuverture->dateDebut = isset($_POST['date_debut']) ? $_POST['date_debut'] : '';
-    $xml->datesOuverture->dateFin = isset($_POST['date_fin']) ? $_POST['date_fin'] : '';
-    echo $xml;
+    // Utilisation de la validation des données, similaire au deuxième script
+    if (!empty($_POST['presentation'])) {
+        $xml->presentation = $_POST['presentation'];
+    }
+    if (!empty($_POST['tarif_semaine_moyenne'])) {
+        $xml->tarifs->semaineMoyenneSaison = $_POST['tarif_semaine_moyenne'];
+    }
+    if (!empty($_POST['tarif_nuitee_moyenne'])) {
+        $xml->tarifs->nuiteeMoyenneSaison = $_POST['tarif_nuitee_moyenne'];
+    }
+    if (!empty($_POST['tarif_semaine_haute'])) {
+        $xml->tarifs->semaineHauteSaison = $_POST['tarif_semaine_haute'];
+    }
+    if (!empty($_POST['tarif_nuitee_haute'])) {
+        $xml->tarifs->nuiteeHauteSaison = $_POST['tarif_nuitee_haute'];
+    }
+    if (!empty($_POST['date_debut'])) {
+        $xml->datesOuverture->dateDebut = $_POST['date_debut'];
+    }
+    if (!empty($_POST['date_fin'])) {
+        $xml->datesOuverture->dateFin = $_POST['date_fin'];
+    }
+
+
     $xml->asXML($filePath);
 
     $informations = json_decode(json_encode((array) $xml), 1);
 
     echo json_encode($informations);
 }
-?>
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if (file_exists($filePath)) {
+        $xml = simplexml_load_file($filePath);
+        $informations = json_decode(json_encode((array) $xml), 1);
+        echo json_encode($informations);
+    } else {
+        // Gérer l'absence du fichier ou renvoyer une réponse d'erreur.
+        echo json_encode(["error" => "Fichier XML non trouvé"]);
+    }
+}
+

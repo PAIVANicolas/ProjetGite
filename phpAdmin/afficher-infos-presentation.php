@@ -31,3 +31,7 @@
     </section>
     <input type="submit" value="Mettre à jour">
 </form>
+
+<script src="/ProjetGite/assets/js/informationsPresentation.js">
+
+</script>

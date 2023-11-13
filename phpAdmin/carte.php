@@ -6,7 +6,7 @@
         <div class="card-content-inserer-image" hidden="hidden">
             <?php include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher-infos-presentation.php");?>
         </div>
-        <button class="card-button" onclick="expandCard(1);mettreinfos()">Ouvrir</button>
+        <button class="card-button" onclick="expandCard(1); mettreInfosPresentationAJour()">Ouvrir</button>
 
     </div>
     <div class="card">
@@ -33,4 +33,3 @@
 </div>
 
 <script src="/ProjetGite/assets/js/informationsContact.js"></script>
-<script src="/ProjetGite/assets/js/informationsPresentation.js"></script>
