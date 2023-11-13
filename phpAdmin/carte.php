@@ -29,7 +29,7 @@
         <div class="card-content-contact-image" hidden="hidden">
             <?php include($_SERVER['DOCUMENT_ROOT'] . "/ProjetGite/phpAdmin/afficher-contact.php"); ?>
         </div>
-        <button class="card-button" onclick="expandCard(4); mettreContactAJour();">Ouvrir</button>
+        <button class="card-button" onclick="expandCard(4); afficherContact();">Ouvrir</button>
     </div>
 </div>
 
