@@ -1,9 +1,11 @@
  <footer class="footerpage">
     <div class="items">
-        <p class="item">email :<a>beatrice.boyer29@orange.fr</a></p>
-        <p class="item">Numéro de téléphone : +33(0) 6 41 57 73 20</p>
-        <p class="item"><a href="https://www.facebook.com/gitefiguies">facebook</a></p>
+        <p class="item">email :<a id="email">/a></p>
+        <p class="item">Numéro de téléphone : +<a id="phonenumber"></a></p>
+        <p class="item"><a id="facebooka" href="https://www.facebook.com/gitefiguies">facebook</a></p>
+        <a class="mention" href="">Mentions légales</a>
     </div>
-    <a class="mention" href="">Mentions légales</a>
+
  </footer>
- 
+
+ <script src="/ProjetGite/assets/js/informations-contact-footer.js"></script>

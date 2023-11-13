@@ -35,4 +35,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     echo json_encode($contact);
 }
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if (file_exists($filePath)) {
+        $xml = simplexml_load_file($filePath);
+    } else {
+        $xml = new SimpleXMLElement('<contacts></contacts>');
+    }
+    $xml->asXML($filePath);
+
+    $contact = json_decode(json_encode((array) $xml), 1);
+
+
+    echo json_encode($contact);
+}
 ?>

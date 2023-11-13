@@ -19,7 +19,6 @@
     emailInput.value = contact.email || 'Pas d\'email';
     phoneInput.value = contact.phone || 'Pas de téléphone';
     facebookInput.value = contact.facebook || 'Pas de profil Facebook';
-    console.log(contact);
 }
 };
 

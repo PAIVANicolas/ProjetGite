@@ -53,7 +53,7 @@
 
     <div class="form-group">
         <label for="clientEmail" class="form-label">Email:</label>
-        <input type="email" id="clientEmail" name="client_email" class="form-input" required="true">
+        <input type="email" id="clientEmail" name="client_email" class="form-input" placeholder="exemple@gmail.com" required="true">
     </div>
 
     <div class="form-group">
