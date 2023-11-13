@@ -1,6 +1,7 @@
 document.getElementById('updateForm').addEventListener('submit', function(e) {
     e.preventDefault();
     mettreInfosAJour();
+    resetCards();
 });
 
 function mettreInfosAJour() {
