@@ -16,7 +16,7 @@ function mettreContactAJour(){
             var contact = JSON.parse(xhr.responseText);
             emailInput.textContent = contact.email || 'Pas d\'email';
             phoneInput.textContent = contact.phone || 'Pas de téléphone';
-            facebookInput.src = contact.facebook || 'Pas de profil Facebook';
+            facebookInput.href = contact.facebook || 'Pas de profil Facebook';
         }
     };
 
